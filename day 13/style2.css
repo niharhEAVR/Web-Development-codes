@@ -1,0 +1,23 @@
+.paraClass{
+    background-color: black;
+    background-color: blue;
+    /* css follow order  */
+    background-color: yellowgreen;
+}
+
+#paraId{
+    background-color: lightblue;
+}
+
+
+article.paraClass{
+    background-color: white;
+    text-align: center;
+}
+/* Here the class name is same but this will change style of only article tag  */
+
+
+*{
+    background-color: lightcoral;
+}
+/* This will change style of entire web background */
