@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        background-color: beige;
+        border: 1px solid black;
+        padding: 2px;
+      }
+      .normal {
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+        background-color: aquamarine;
+        border: 1px solid red;
+      }
+      .container2{
+        width: 100%;
+        background-color: beige;
+        border: 1px solid black;
+        overflow: auto;
+      }
+      .div{
+        width: 150px;
+        height: 150px;
+        margin: 4px 0px 0px 4px;
+        background-color: aquamarine;
+        border: 1px solid red;
+        float: left;
+      }
+      .box{
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+        background-color: aquamarine;
+        border: 1px solid red;
+        float: left;
+      }
+      .overflow{
+        border: 1px solid black;
+        width: 50%;
+        height: 500px;
+        margin-top: 50px;
+        background-color: beige;
+      }
+      .overflow2{
+        border: 1px solid black;
+        width: 50%;
+        height: 500px;
+        margin-top: 300px;
+        background-color: beige;
+        overflow: scroll;
+        
+        /* overflow: auto ; */
+        /* overflow: hidden; */
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+            <b>Before adding any porperty</b>
+          <div class="container">
+            <div class="normal">A</div>
+            <div class="normal">B</div>
+            <div class="normal">C</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+            <b>After adding float porperty to div class. You can clearly see that the boxses came out of his parent element. This is called The Great Collapse</b>
+          <div class="container">
+            <div class="div">A</div>
+            <div class="div">B</div>
+            <div class="div">C</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <b>After adding (overflow:auto;) porperty to container2 or parent element then its looks good</b>
+          <div class="container2">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+
+    <div class="overflow">
+        <b>Here is a Example of over flowing content</b>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem iste praesentium iure, quia velit minus maxime quis blanditiis porro sequi enim est quod ab perferendis totam fugiat voluptate, incidunt itaque odio animi quos? Nemo corrupti voluptatem unde blanditiis harum eligendi? Optio repellat officiis soluta dolores temporibus architecto quis quia facilis vitae, voluptatibus harum ratione natus corporis perferendis officia, sunt quidem velit ab reiciendis magnam, ad beatae eos? Cum ex, eius vero ea facilis labore alias soluta optio excepturi quibusdam culpa cumque minima nostrum necessitatibus quam quo nihil asperiores. Sit maxime fuga veritatis, excepturi rem tempore libero architecto, soluta maiores, a doloribus quaerat dolor! Porro voluptate dolor neque. Aperiam, voluptas nihil nostrum, laboriosam rem eius quasi saepe sunt aliquam itaque sequi dolorum consequuntur provident? Corrupti velit, at explicabo laboriosam ullam perferendis ut commodi aut molestias asperiores cupiditate rerum maiores unde est? Quae aspernatur dolore quaerat voluptatibus dolorum, officia, dicta quasi praesentium dignissimos placeat ullam provident fuga, veniam doloribus vero numquam id omnis! Aut accusamus neque eveniet accusantium, tempora earum provident optio perferendis in totam quisquam blanditiis consectetur modi quas impedit ab officiis numquam qui. Suscipit odit voluptatibus consectetur blanditiis sequi voluptates ullam quasi officiis non aperiam, dignissimos eaque consequuntur, corrupti libero molestias nesciunt ex perspiciatis unde quibusdam omnis assumenda atque! Officiis, eveniet excepturi, cumque quibusdam consectetur nesciunt sed placeat pariatur natus soluta ut velit, molestias repellendus ad deleniti. At omnis quaerat ex consequatur enim architecto quasi officia mollitia hic, cupiditate iure saepe doloribus, rerum laboriosam. Rerum recusandae ratione quod eligendi laborum vero neque amet? Repellendus, deserunt asperiores alias quo maiores sit quod voluptatem laboriosam! Quod quas cum culpa suscipit veniam, qui quos ratione tempore eos dicta porro enim facere. Nostrum earum, consequuntur eum architecto illo tempora, molestiae quaerat delectus eligendi enim aliquam minima magnam illum fugiat ea nobis numquam. Nulla, eius? Laborum aliquid, maiores expedita ipsam libero quo repellendus nobis id hic, a magnam voluptatem itaque corporis adipisci error placeat delectus iusto in minima. Debitis cumque eius illo esse adipisci nesciunt molestias voluptate, earum perferendis laudantium repellendus asperiores quibusdam! Minus non architecto, labore quam reprehenderit obcaecati dicta quisquam nobis, porro quasi dolore! Omnis ex, esse molestiae possimus atque nam debitis temporibus laudantium nesciunt id dolor aut quasi? Repudiandae cumque vitae non vel modi a? Temporibus maiores fuga nostrum aperiam inventore iusto voluptatum excepturi quae, nam debitis perspiciatis totam rem ratione veniam laudantium obcaecati in voluptatem, minima provident iste. Ad dignissimos aliquid sapiente enim vero iste perspiciatis ut quas. Eum ipsam, aliquam beatae expedita illum adipisci deleniti provident alias quam quisquam at velit impedit optio odio vitae incidunt repudiandae neque. Sit, explicabo officia atque eum molestiae corporis? Ad, nisi molestiae. Odio vitae est nemo laborum, obcaecati iure iusto minus accusantium nesciunt ducimus molestias possimus vel necessitatibus tempora reiciendis deserunt exercitationem consequuntur temporibus delectus nobis. Quos reiciendis incidunt molestiae quas nobis totam ipsa rem ipsum quis earum culpa, tempora dolore, magni laudantium exercitationem similique illum harum fuga natus accusamus hic perspiciatis? Magni numquam ullam totam aliquam atque porro alias illum quam officia?</p>
+    </div>
+    <div class="overflow2">
+        <b>Here we used overflow property and see that its forcely stored in parent element</b>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam voluptatem iste praesentium iure, quia velit minus maxime quis blanditiis porro sequi enim est quod ab perferendis totam fugiat voluptate, incidunt itaque odio animi quos? Nemo corrupti voluptatem unde blanditiis harum eligendi? Optio repellat officiis soluta dolores temporibus architecto quis quia facilis vitae, voluptatibus harum ratione natus corporis perferendis officia, sunt quidem velit ab reiciendis magnam, ad beatae eos? Cum ex, eius vero ea facilis labore alias soluta optio excepturi quibusdam culpa cumque minima nostrum necessitatibus quam quo nihil asperiores. Sit maxime fuga veritatis, excepturi rem tempore libero architecto, soluta maiores, a doloribus quaerat dolor! Porro voluptate dolor neque. Aperiam, voluptas nihil nostrum, laboriosam rem eius quasi saepe sunt aliquam itaque sequi dolorum consequuntur provident? Corrupti velit, at explicabo laboriosam ullam perferendis ut commodi aut molestias asperiores cupiditate rerum maiores unde est? Quae aspernatur dolore quaerat voluptatibus dolorum, officia, dicta quasi praesentium dignissimos placeat ullam provident fuga, veniam doloribus vero numquam id omnis! Aut accusamus neque eveniet accusantium, tempora earum provident optio perferendis in totam quisquam blanditiis consectetur modi quas impedit ab officiis numquam qui. Suscipit odit voluptatibus consectetur blanditiis sequi voluptates ullam quasi officiis non aperiam, dignissimos eaque consequuntur, corrupti libero molestias nesciunt ex perspiciatis unde quibusdam omnis assumenda atque! Officiis, eveniet excepturi, cumque quibusdam consectetur nesciunt sed placeat pariatur natus soluta ut velit, molestias repellendus ad deleniti. At omnis quaerat ex consequatur enim architecto quasi officia mollitia hic, cupiditate iure saepe doloribus, rerum laboriosam. Rerum recusandae ratione quod eligendi laborum vero neque amet? Repellendus, deserunt asperiores alias quo maiores sit quod voluptatem laboriosam! Quod quas cum culpa suscipit veniam, qui quos ratione tempore eos dicta porro enim facere. Nostrum earum, consequuntur eum architecto illo tempora, molestiae quaerat delectus eligendi enim aliquam minima magnam illum fugiat ea nobis numquam. Nulla, eius? Laborum aliquid, maiores expedita ipsam libero quo repellendus nobis id hic, a magnam voluptatem itaque corporis adipisci error placeat delectus iusto in minima. Debitis cumque eius illo esse adipisci nesciunt molestias voluptate, earum perferendis laudantium repellendus asperiores quibusdam! Minus non architecto, labore quam reprehenderit obcaecati dicta quisquam nobis, porro quasi dolore! Omnis ex, esse molestiae possimus atque nam debitis temporibus laudantium nesciunt id dolor aut quasi? Repudiandae cumque vitae non vel modi a? Temporibus maiores fuga nostrum aperiam inventore iusto voluptatum excepturi quae, nam debitis perspiciatis totam rem ratione veniam laudantium obcaecati in voluptatem, minima provident iste. Ad dignissimos aliquid sapiente enim vero iste perspiciatis ut quas. Eum ipsam, aliquam beatae expedita illum adipisci deleniti provident alias quam quisquam at velit impedit optio odio vitae incidunt repudiandae neque. Sit, explicabo officia atque eum molestiae corporis? Ad, nisi molestiae. Odio vitae est nemo laborum, obcaecati iure iusto minus accusantium nesciunt ducimus molestias possimus vel necessitatibus tempora reiciendis deserunt exercitationem consequuntur temporibus delectus nobis. Quos reiciendis incidunt molestiae quas nobis totam ipsa rem ipsum quis earum culpa, tempora dolore, magni laudantium exercitationem similique illum harum fuga natus accusamus hic perspiciatis? Magni numquam ullam totam aliquam atque porro alias illum quam officia?</p>
+    </div>
+
+  </body>
+</html>
