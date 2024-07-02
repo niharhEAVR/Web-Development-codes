@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable In CSS</title>
+    <style>
+        :root{
+            --custom-width: 400px;
+            --custom-height: 400px;
+            --background-color: greenyellow;
+            --custom-border: 2px solid red;
+        }
+        .box1{
+            margin: 10px;
+            --bgcol: lightblue;
+            --border: 2px solid black;
+            --width: 200px;
+            --height: 200px;
+            width: var(--width);
+            height: var(--height);
+            background-color: var(--bgcol);
+            border: var(--border);
+        }
+        .box2{
+            margin: 10px;
+            margin: 10px;
+            width: var(--custom-width);
+            height: var(--custom-height);
+            background-color: var(--background-color);
+            border: var(--custom-border);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">Variable in CSS, Local Variable</div>
+    <div class="box2">Variable in CSS, Global Variable</div>
+</body>
+</html>

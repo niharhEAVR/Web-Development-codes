@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow</title>
+    <style>
+        .container{
+            background-color: beige;
+            height: 750px;
+            width: 1500px;
+            margin: 50px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 20px 20px 5px 2em  gray;
+        }
+        .box{
+            background-color: aquamarine;
+            width: 260px;
+            height: 400px;
+            border: 1px solid brown;
+            margin: 50px;
+            padding: 5px;
+        }
+        #item1{
+            box-shadow: -20px -20px brown;
+        }
+        #item2{
+            box-shadow: 20px 20px 10px  brown;
+        }
+        #item3{
+            box-shadow: inset -20px -20px 10px brown;
+        }
+        #item4{
+            box-shadow: -20px -20px brown, 20px 20px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="item1">
+            <img src="../day 19/image.jpg" alt="rick cook">
+            <h1>Rick Cook</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, exercitationem error! Sed, ad veritatis eos vitae iusto minima accusamus quis dicta, aliquid maiores, possimus repudiandae?</p>
+        </div>
+        <div class="box" id="item2">
+            <img src="../day 19/image.jpg" alt="rick cook">
+            <h1>Rick Cook</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, exercitationem error! Sed, ad veritatis eos vitae iusto minima accusamus quis dicta, aliquid maiores, possimus repudiandae?</p>
+        </div>
+        <div class="box" id="item3">
+            <img src="../day 19/image.jpg" alt="rick cook">
+            <h1>Rick Cook</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, exercitationem error! Sed, ad veritatis eos vitae iusto minima accusamus quis dicta, aliquid maiores, possimus repudiandae?</p>
+        </div>
+        <div class="box" id="item4">
+            <img src="../day 19/image.jpg" alt="rick cook">
+            <h1>Rick Cook</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, exercitationem error! Sed, ad veritatis eos vitae iusto minima accusamus quis dicta, aliquid maiores, possimus repudiandae?</p>
+        </div>
+    </div>
+</body>
+</html>
