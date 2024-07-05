@@ -1,13 +1,17 @@
 .paraClass{
     background-color: black;
     background-color: blue;
-    /* css follow order  */
     background-color: yellowgreen;
+    /* css follows order  */
 }
 
 #paraId{
     background-color: lightblue;
 }
+span#paraId{
+    background-color: beige;
+}
+/* Here the id name is same but this will change style of only span tag  */
 
 
 article.paraClass{
