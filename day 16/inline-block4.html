@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inline-Block Element</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-        span{
-            border: 2px solid green;
-            width: 400px;
-            height: 300px;
-            padding: 15px;
-            margin: 15px;
-            display: inline-block;
-        }
+      span{
+        border: 2px solid green;
+        width: 400px;
+        height: 300px;
+        padding: 15px;
+        margin: 15px;
+      }
+
+      .inline_block {
+        border: 2px solid green;
+        width: 400px;
+        height: 300px;
+        padding: 15px;
+        margin: 15px;
+        display: inline-block;
+      }
+
     </style>
-</head>
-<body>
-    <span>This is a Span tag or inline element</span>
-    <span>This is a Span tag or inline element 2.0</span>
-</body>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <th colspan="2">
+          Both the box have same size but one uses display inline block
+        </th>
+        <tr>
+          <th>Normal</th>
+          <th>display: inline-block;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span>This is a Span tag or inline element</span></td>
+          <td>
+            <span class="inline_block"
+              >This is a Span tag or inline element</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>

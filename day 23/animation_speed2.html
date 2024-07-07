@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation speeds</title>
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        background-color: crimson;
+        color: aliceblue;
+        padding: 5px;
+        margin: 10px;
+        font-weight: bold;
+        position: relative;
+        animation: boxes 5s infinite;
+        animation-fill-mode: forwards;
+      }
+
+      #div1 {
+        animation-timing-function: linear;
+      }
+      #div2 {
+        animation-timing-function: ease;
+      }
+      #div3 {
+        animation-timing-function: ease-in;
+      }
+      #div4 {
+        animation-timing-function: ease-out;
+      }
+      #div5 {
+        animation-timing-function: ease-in-out;
+      }
+      #div6 {
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      @keyframes boxes {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation</h1>
+
+    <div id="div1">linear</div>
+    <div id="div2">ease</div>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-out</div>
+    <div id="div5">ease-in-out</div>
+    <div id="div6">cubic-beizer</div>
+  </body>
+</html>
