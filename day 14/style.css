@@ -29,3 +29,23 @@ p{
 .class2{
     background-color: hsla(172, 87%, 65%, 0.801);
 }
+
+
+.box {
+    background-color: aqua;
+}
+.box1{
+    padding: 10px;
+    margin:35px;
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+}
+.box2{
+    color:red;
+    padding: 10px;
+    margin:35px;
+    border: 2px solid black;
+    width: 700px;
+    height: 200px;
+}
