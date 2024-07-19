@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists Style</title>
+    <style>
+      .first {
+        display: flex;
+        background-color: blue;
+      }
+      .first li {
+        background-color: beige;
+        padding: 0px 50px 0px 50px;
+        margin: 10px;
+        border: 2px solid red;
+        list-style-type: none;
+      }
+      ol li {
+        list-style: bengali;
+        background-color: aqua;
+      }
+      .second li {
+        background-color: violet;
+        list-style-position: inside;
+      }
+      .third li {
+        list-style-image: url("gif.webp");
+        list-style-position: inside;
+      }
+      .fourth li {
+        background-color: violet;
+        /* you can select emojis as a marsker  */
+        list-style-type: "👽";
+        list-style-position: inside;
+      }
+      .fifth li {
+        background-color: violet;
+        /* shorthand notation */
+        list-style: "🤡" inside;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="first">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Socialmedia</li>
+    </ul>
+    <ol>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Socialmedia</li>
+    </ol>
+    <ol class="second">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Socialmedia</li>
+    </ol>
+    <ol class="third">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Socialmedia</li>
+    </ol>
+    <ol class="fourth">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Socialmedia</li>
+    </ol>
+    <ol class="fifth">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Socialmedia</li>
+    </ol>
+  </body>
+</html>

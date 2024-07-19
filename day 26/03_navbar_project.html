@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --bgCol: beige;
+            --listCol: blue;
+            --navBatrCol: red;
+            --textCol: white;
+            background-color: var(--bgCol);
+        }
+        nav{
+            background-color: var(--navBatrCol);
+            height: var(--height);
+            padding: 20px 0px;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+        }
+        ul li a{
+            padding: 20px;
+            font-weight: bolder;
+            color: var(--textCol);
+            text-decoration: none;
+            /* text decoration will remove the underline of the anchor tags  */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <!-- click on the home button in web page and see magic -->
+                <!-- (/) forward slash works like this -->
+                <li><a href="./">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

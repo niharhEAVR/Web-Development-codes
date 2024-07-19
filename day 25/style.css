@@ -25,16 +25,16 @@ body{
 }
 #box3:hover{
              /* (x direction, y direction) */
-    transform: skew(0deg,45deg);
+    transform: skew(34deg,45deg);
 
 }
 #box4:hover{
              /* (x direction, y direction) */
-    transform: translate(0px, 500px);
+    transform: translate(-90px, -500px);
 
 }
 #box5:hover{
-    transform: scale(0.5) translate(100%, -100%);
+    transform: scale(0.5) translate(-100%, -100%);
 
 }
 p{

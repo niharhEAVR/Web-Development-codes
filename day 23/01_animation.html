@@ -15,6 +15,7 @@
         width: 100vw;
         height: 100vh;
         padding: 10px;
+        box-sizing: border-box;
       }
       #box1 {
         background-color: aqua;
@@ -47,7 +48,7 @@
           left: 0vw;
         }
         to {
-          left: 100%;
+          left: 100vw;
         }
       }
       @keyframes box2 {
@@ -55,13 +56,13 @@
           left: 0vw;
         }
         to {
-          left: 100%;
+          left: 100vw;
         }
       }
       @keyframes circle1 {
         0% {
-          top: 0px;
-          left: 0px;
+          top: 0%;
+          left: 0%;
         }
         25% {
           top: 10%;

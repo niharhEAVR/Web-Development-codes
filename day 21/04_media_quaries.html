@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS media query</title>
+    <style>
+      /* 
+        @media not|only mediatype and (expressions) {
+            CSS-Code;
+        } 
+        */
+      body {
+        background-color: beige;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .box {
+        width: 250px;
+        height: 250px;
+        background-color: steelblue;
+        padding: 10px;
+        margin: 10px;
+      }
+      /* @media screen and (orientation: portrait) {
+            body{
+                border: 2px solid purple;
+            }
+        } */
+      @media screen and (orientation: landscape) {
+        body {
+          border: 2px solid purple;
+        }
+      }
+
+      @media only screen and (max-width: 455px) {
+        body {
+          background-color: lightpink;
+        }
+
+        .container {
+          flex-direction: column;
+        }
+        .box {
+          background-color: rgb(111, 71, 255);
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
