@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      body {
+        height: 200vh;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        clear: both;
+        height: 9vh;
+        width: 100%;
+        background-color: rgba(13, 142, 247, 0.815);
+      }
+      header ul {
+        display: flex;
+      }
+      header ul li {
+        padding: 30px;
+        list-style: none;
+      }
+      header ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+      }
+      a:hover {
+        background-color: rgba(38, 72, 224, 0.466);
+        padding: 20px;
+        border-radius: 10px;
+        transition: all ease 0.5s;
+      }
+
+      main .head {
+        height: 80vh;
+        background-color: rgba(75, 214, 233, 0.384);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+      }
+      .head .welcome {
+        padding: 50px 150px 50px 150px;
+        border-radius: 150px;
+        border: 2px solid lightcoral;
+        background-color: lightcoral;
+        transition: transform 1s;
+      }
+      main .head :hover {
+        transform: scale(1.5);
+      }
+      main .body {
+        height: 100vh;
+        background-color: beige;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .body .box {
+        background-color: rgba(75, 214, 233, 0.384);
+        border: none;
+        padding: 20px;
+        height: 200px;
+        width: 300px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .logo {
+        display: flex;
+        position: fixed;
+        top: 88vh;
+        left: 92%;
+        height: 90px;
+        transition: transform 0.5s linear;
+      }
+    .logo:hover{
+        transform:rotate(180deg);
+       }
+      footer {
+        height: 11vh;
+        background-color: lightgray;
+        text-align: center;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Contect Us</a></li>
+        <li><a href="/">Social Media</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="logo">
+        <img src="./logo.jpg" alt="logo" style="border-radius: 90px" />
+      </div>
+      <div class="head">
+        <div class="welcome">Welcome</div>
+      </div>
+      <div class="body">
+        <div class="box">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et
+          deleniti cupiditate similique laudantium atque eligendi voluptatum
+          enim minus ex aut doloremque recusandae sed, quis quaerat nisi quia
+          laboriosam neque fugiat hic! A, provident alias? Ipsum voluptate
+          voluptatem eum facere nam explicabo iure odio, porro hic quam eius
+          itaque adipisci?
+        </div>
+        <div class="box">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          quidem facere, possimus ex necessitatibus illo accusantium officiis
+          illum sed ullam nihil doloremque praesentium? Praesentium est quidem
+          consequatur alias adipisci veritatis dignissimos enim, exercitationem
+          expedita modi facere accusamus ducimus asperiores eum dolores aliquid
+          aliquam ea. Architecto natus non voluptatum ratione qui.
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 All Right Reserved.</p>
+    </footer>
+  </body>
+</html>
