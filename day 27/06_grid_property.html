@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 90vh;
+            border: 2px solid black;
+            display: grid;
+
+
+
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(2, 80px);
+
+
+
+            /* if we want to set our whole grid at anywhere inside container then we use justify-content: ; and align-content: ; */
+            /* use developer tool and click on grid then check */
+            justify-content: center;
+            align-content: center;
+
+            /* place-content: ; is the plus of justify-content: ; and align-content: ; */
+            place-content: center;
+
+            /* justify-items: ; and align-items: ; is used to set the items anywhere inside a grid cell  */
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>

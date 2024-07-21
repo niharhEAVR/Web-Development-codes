@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: [prothom]200px [ditio]100px [tritio]100px [chothurtho];
+            grid-template-rows: [prothom]300px [ditio]200px [tritio]100px [chothurtho];
+        }
+        .items{
+            height: 50px;
+            width: 50px;
+            border: 2px solid red;
+        }
+        .item1{
+            grid-row: tritio/chothurtho;
+            grid-column: ditio/tritio;
+        }
+        .item5{
+            grid-row: tritio/chothurtho;
+            grid-column: prothom/ditio;
+        }
+        .item4{
+            grid-row: ditio/tritio;
+            grid-column: tritio/chothurtho;
+        }
+        /* this is how you can put names of grid line and use it */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+        <div class="items item5">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 90vh;
+            border: 2px solid black;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            
+
+            /* grid-template-columns: 1fr 1fr ; */
+            /* in upper property the 1fr is reapeating 2 times thats why write the down property  */
+            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-rows: 1fr 2fr 1fr;
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            /* this property define that the grid cell width should be 100 px at minimum and 1fr at maximum */
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" style="align-self: start">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>
