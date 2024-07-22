@@ -16,7 +16,9 @@ body{
     transition: all 1s linear; 
 }
 #box1:hover{
-    transform: rotate(-360deg);
+    /* transform: rotate(-360deg); */
+    transform: rotate(-1.0turn);
+    /* transform-origin: 10vw 20vh; */
 
 }
 #box2:hover{
