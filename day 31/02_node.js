@@ -29,6 +29,9 @@ console.log("Hello World!")
         let b = "5";
         let c = (a===b);
         console.log(c)
+        // console.log('5' == 5)
+        // console.log('5' === 5)
+        
     }
     {
         let a = 5;
@@ -57,4 +60,12 @@ console.log("Hello World!")
     // logical not
     console.log(!1)
     console.log(!0)
+
+
+    {
+        // shortcircuit method 
+        console.log(false || "nihar")
+        console.log(false || 1 || 3)
+        console.log(false && 1 && 3)
+    }
 }

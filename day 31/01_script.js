@@ -57,7 +57,7 @@ console.log("Primitive datatypes")
     let n3 = BigInt(528294747);
     let n4 = "nihar";
     let n5 = true;
-    let n6 = undefined;
+    let n6;
     let n7 = null;
     
     console.log( n1, n2, n3, n4, n5, n6, n7)
