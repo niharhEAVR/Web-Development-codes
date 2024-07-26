@@ -5,13 +5,13 @@ if(Math.random()<=0.1){
         return x-y
     }
     function sub(x,y){
-        return x+y
+        return x/y
     }
     function div(x,y){
-        return x*y
+        return x**y
     }
     function mul(x,y){
-        return x**y
+        return x+y
     }
 }else{
     function sum(x,y){
