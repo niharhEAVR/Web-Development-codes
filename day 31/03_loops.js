@@ -36,4 +36,8 @@
         console.log(element)
     }
     
+    for (const key in data) {
+        const element = data[key];
+        console.log(key, element)
+    }
 }

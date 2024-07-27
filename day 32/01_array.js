@@ -60,3 +60,27 @@ console.log(arr[7])
 
     console.log(a1.concat(a2,a3))
 }
+
+
+{
+    let a =[5,3,79,35,1,2]
+    a.sort()
+    console.log(a)
+}
+
+
+{
+    let a = [1,"nihar",3,4,5]
+    a.splice(2,2)
+    console.log(a)
+    a.splice(2,2,69,919)
+    console.log(a)
+}
+
+
+{
+    const a = [1,2,3,4,5]
+    
+    console.log(a.slice(2))
+    console.log(a.slice(2,4))
+}
