@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting in javascript</title>
+    <style>
+      .box5{
+        color: blue;
+        font-size: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box circle square rectangle">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Hey welcome</div>
+      <div class="box">Data creation</div>
+      <div class="box">Data methods</div>
+      <div class="box">Data</div>
+      <div class="box5">Data</div>
+    </div>
+    <script>
+      console.log(document.querySelector(".container").classList);
+      console.log(document.querySelector(".box").classList);
+      
+      document.body.firstElementChild.children[2].classList.add("circle")
+      document.body.firstElementChild.children[3].classList.remove("box")
+      // console.log(document.querySelector(".box").classList.remove("rectangle"));
+
+      
+      document.body.firstElementChild.children[1].classList.toggle("box") // this toggle will remove the exsisting class or if there is no class then it will add
+      document.body.firstElementChild.children[4].classList.toggle("pikachu")
+      // document.body.firstElementChild.children[5].classList.toggle("box5")
+
+    </script>
+  </body>
+</html>

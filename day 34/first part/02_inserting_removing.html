@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting and removing in javascript</title>
+    <script src="./01_script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Lorem ipsum dolor sit amet.</div>
+      <div class="box">Hey welcome</div>
+    </div>
+    <script>
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterbegin" , "<b> Here we are again</b>")
+        let cont2 = document.querySelector(".container")
+        cont.insertAdjacentHTML("beforeend" , "<b> Here we are again</b>")
+        let cont3 = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterend" , "<b> Here we are again</b>")
+        let cont4 = document.querySelector(".container")
+        cont.insertAdjacentHTML("beforebegin" , "<b> Here we are again</b>")
+        // open console then you get to see where its inserting
+
+
+        // document.querySelector(".container").remove()
+        // document.querySelector(".box").remove()
+    </script>
+  </body>
+</html>

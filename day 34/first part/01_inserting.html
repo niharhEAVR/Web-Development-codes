@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting in javascript</title>
+    <script src="./01_script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- comment -->
+      <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, quo.
+      </div>
+      <div class="box" id="box2">Hey welcome</div>
+      <div class="box" data-createdby="nihar">Data creation</div>
+      <div
+        class="box"
+        data-createdby="nihar"
+        data-conceptby="abhirup"
+        data-holder="harsh"
+        data-writeAnythingYouWant="bridge"
+      >
+        Data methods
+      </div>
+    </div>
+    <script>
+      let div = document.createElement("div");
+      div.innerHTML = "Insertion <b>it has been inserted by me</b>";
+      div.setAttribute("class", "box");
+      document.querySelector(".container").append(div); // append will insert the tag inside that element
+      document.querySelector(".container").before(div); // before will insert the tag before the container element
+      document.querySelector(".container").after(div); // after will insert the tag after the container element
+
+      // this upper lines will not work for external javascript
+    </script>
+  </body>
+</html>
