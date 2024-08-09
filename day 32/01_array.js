@@ -83,4 +83,5 @@ console.log(arr[7])
     
     console.log(a.slice(2))
     console.log(a.slice(2,4))
+    // array
 }
