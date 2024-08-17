@@ -68,4 +68,19 @@ console.log("Hello World!")
         console.log(false || 1 || 3)
         console.log(false && 1 && 3)
     }
+
+
+
+    {
+        const fruit = "mango";
+        switch (fruit) {
+            case "mango":
+                console.log(`My fav fruit is ${fruit}`)
+                break;
+        
+            default:
+                console.log("Hehe")
+                break;
+        }
+    }
 }

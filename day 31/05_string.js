@@ -20,6 +20,7 @@
     console.log(`My name is ${myName} and my favourite sport is ${favSport}`)
 
     // (``) this symbol is called backtick, its upside the tab and downside the escape button on keyboard
+    // this method is called string interpolation
 }
 
 {
@@ -43,8 +44,20 @@
 
 
     console.log(b.replace("ANA", "999"))
+    console.log(b)// because the strings are immutable thats why its remains same
+
+
+    b = b.replace("BA", "69")
+    console.log(b)// having the mutability but we can do this though
+
+
+
     console.log(b.concat(" ",a))
     console.log(b.concat(a, " pie"))
+
+    let name = "           nihar debnath            ";
+    console.log(name.trim())
+    console.log(name) // the original string remains same for immutability
 }
 
 {

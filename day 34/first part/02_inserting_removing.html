@@ -4,8 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inserting and removing in javascript</title>
-    <script src="./01_script.js"></script>
   </head>
+  <style>
+    .container{
+      height: 250px;
+      width: 450px;
+      background-color: cornflowerblue;
+      padding: 10px;
+      margin: 5px 0px;
+      border: 1px solid black;
+    }
+    .box{
+      color: aliceblue;
+    }
+  </style>
   <body>
     <div class="container">
       <div class="box">Lorem ipsum dolor sit amet.</div>
@@ -13,18 +25,14 @@
     </div>
     <script>
         let cont = document.querySelector(".container")
-        cont.insertAdjacentHTML("afterbegin" , "<b> Here we are again</b>")
+        cont.insertAdjacentHTML("afterbegin" , "<b>After Begin</b>")
         let cont2 = document.querySelector(".container")
-        cont.insertAdjacentHTML("beforeend" , "<b> Here we are again</b>")
+        cont.insertAdjacentHTML("beforeend" , "<b>beforeend</b>")
         let cont3 = document.querySelector(".container")
-        cont.insertAdjacentHTML("afterend" , "<b> Here we are again</b>")
+        cont.insertAdjacentHTML("afterend" , "<b>afterend</b>")
         let cont4 = document.querySelector(".container")
-        cont.insertAdjacentHTML("beforebegin" , "<b> Here we are again</b>")
+        cont.insertAdjacentHTML("beforebegin" , "<b>beforebegin</b>")
         // open console then you get to see where its inserting
-
-
-        // document.querySelector(".container").remove()
-        // document.querySelector(".box").remove()
     </script>
   </body>
 </html>

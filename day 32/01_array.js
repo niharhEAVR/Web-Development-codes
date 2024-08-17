@@ -1,3 +1,6 @@
+// first thing first that array is mutable
+
+
 let arr = [1,2,3,4,5,7]
 console.log(arr)
 console.log(typeof arr)
@@ -5,10 +8,9 @@ console.log(typeof arr)
 console.log(arr.length)
 
 
-// array is mutable
-// arr[0] = 69
-// console.log(arr[0])
-// console.log(arr)
+arr[0] = 919
+console.log(arr[0])
+console.log(arr)
 
 
 // array from number to convert into string
@@ -57,12 +59,19 @@ console.log(arr[7])
     let a1 =[1,2,3]
     let a2 = [4,5,6]
     let a3 = [7,8,9]
-
+    
     console.log(a1.concat(a2,a3))
+
+    let arr1 = ["apple","banana","mango"];
+    let arr2 = [1,2,3];
+    // concat method doesnot change the original array
+    arr1.concat(arr2);
+    console.log(arr1);
 }
 
 
 {
+    // sort only sort the first digit of a number from low to high
     let a =[5,3,79,35,1,2]
     a.sort()
     console.log(a)
@@ -70,10 +79,15 @@ console.log(arr[7])
 
 
 {
+    // splice method will change the original array
     let a = [1,"nihar",3,4,5]
     a.splice(2,2)
     console.log(a)
-    a.splice(2,2,69,919)
+    a.splice(2,0,69,919)
+    console.log(a)
+
+    // single value splice will delete the index to rest elements
+    a.splice(3)
     console.log(a)
 }
 
@@ -81,7 +95,28 @@ console.log(arr[7])
 {
     const a = [1,2,3,4,5]
     
+    // single value slice will keep the index to rest elements
     console.log(a.slice(2))
     console.log(a.slice(2,4))
-    // array
+    // slice method doesnot change the original array
+    a.slice(2);
+    console.log(a)
+}
+
+
+
+
+
+
+
+{
+    let companies = ["Boomberg", "Microsoft","Uber","Google","IBM","Netflix"];
+    companies.shift(0)
+    console.log(companies);
+    companies.splice(1,1,"OLA")
+    // the 1 is the position not the index value do not confuse with it
+    console.log(companies);
+    companies.push("Amazon")
+    console.log(companies);
+
 }

@@ -7,6 +7,6 @@ document.querySelector(".childContainer").addEventListener("click", (e)=>{
     e.stopPropagation()
     alert("You Clicked on the childContainer")
 })
-document.querySelector(".container").addEventListener("click", (e)=>{
+document.querySelector(".container").addEventListener("click", ()=>{
     alert("You Clicked on the container")
 })

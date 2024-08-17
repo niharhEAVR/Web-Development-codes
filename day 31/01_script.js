@@ -25,7 +25,7 @@ console.log(d)
 
 
 
-console.log("let usage")
+console.log("\*let usage\*")
 let a1 = 5;
 {
     let b1 = 45;
@@ -36,7 +36,7 @@ let a1 = 5;
 console.log(a1)
 // console.log(b1)
 // when we use let variable outside the block it will give error
-console.log("var usage")
+console.log("\*var usage\*")
 var a12 = 10;
 {
     var b1 = 7;
@@ -50,7 +50,7 @@ console.log(b1)
 
 
 
-console.log("Primitive datatypes")
+console.log("\*Primitive datatypes\*")
 {
     let n1 = 5;
     let n2 = 5.34;
@@ -59,22 +59,35 @@ console.log("Primitive datatypes")
     let n5 = true;
     let n6;
     let n7 = null;
+    let n8 = Symbol("Hello!");
     
-    console.log( n1, n2, n3, n4, n5, n6, n7)
-    console.log( typeof n1, typeof n2, typeof n3, typeof n4, typeof n5, typeof n6, typeof n7)
+    console.log( n1, n2, n3, n4, n5, n6, n7, n8)
+    console.log( typeof n1, typeof n2, typeof n3, typeof n4, typeof n5, typeof n6, typeof n7, typeof n8)
 }
 
 
-console.log("Objects")
+console.log("\*Objects\*")
 {
     let n1 = {
         name : "nihar",
-        profession : "student"
+        profession : "student",
+        age : 19
     }
     console.log(n1)
     n1.learning = "Web Development"
     console.log(n1)
     n1.learning = "Web Development + web3 + devops"
     console.log(n1)
+
+    // printing value of objects (single)
+    console.log(n1.name)
+    console.log(n1["learning"])
+    // the both ways you can print object values
+
+    n1.age = n1.age + 1;
+    console.log(n1.age);
+    // updating the age 
+
+    console.log(typeof n1.age)
 }
 

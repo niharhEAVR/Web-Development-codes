@@ -22,22 +22,87 @@
 */
 
 
-{
-    let data = {
-        name: "nihar",
-        professional: "student",
-        degree: "B.C.A"
-    }
-    for (const key in data) {
-        console.log(key)
-    }
-    for (const key in data) {
-        const element = data[key];
-        console.log(element)
-    }
+
+
+// for-of loop
+// {
+//     // this is how you can iteriate a string using  for-of loop (for single sigle characters)
+//     let name = "Nihar Debnath";
+//     for (const element of name) { // iterator -> characters
+//         console.log(`element = ${element}`)
+//     }
+
+
+//     // another good use of for-of loop is to find a string size
+//     let language = "Javascript"; 
+//     let stringLength = 0; 
+//     for (const element of language) {
+//         stringLength++
+//     }
+//     console.log(`string length or size = ${stringLength}`)
+//     console.log("string length or size = ", stringLength)
+//     console.log("string length or size = " + stringLength)
+// }
+
+
+
+
+
+// for-in loop
+// {
+//     let data = {
+//         name: "nihar",
+//         professional: "student",
+//         degree: "B.C.A",
+//         age: 19
+//     }
+//     for (const key in data) {
+//         console.log(key)
+//     }
+//     for (const key in data) {
+//         const element = data[key];
+//         console.log(element)
+//     }
     
-    for (const key in data) {
-        const element = data[key];
-        console.log(key, element)
-    }
+//     for (const key in data) {
+//         const element = data[key];
+//         console.log(key,":", element)
+//     }
+// }
+
+
+
+
+
+{
+    // Returns a random integer from 0 to 9
+    let randomNumber = Math.floor(Math.random()*10);
+    console.log(`The random number is: ${randomNumber}`);
 }
+{
+    // Returns a random integer from 1 to 99:
+    let randomNumber = Math.floor(Math.random()*100)+1;
+    console.log(`The random number is: ${randomNumber}`);
+}
+{
+    // Returns a random integer from 1 to 100:
+    let randomNumber = Math.floor(Math.random()*101)+1;
+    console.log(`The random number is: ${randomNumber}`);
+}
+// this is how you can controll the Math.random function
+
+
+
+
+
+
+// guessing number game
+// {
+//     let randomNumber = Math.floor(Math.random()*10);
+//     let guessedNumber = prompt("Guess the number: ");
+//     while( randomNumber!= guessedNumber) // prompt take any number in string format so always use (!=) not this (!==)
+//     {
+//         guessedNumber = prompt("Wrong! Guess again: ");
+//     }
+//     console.log("You are correct.");
+// }

@@ -39,3 +39,46 @@ const func2 = (x) =>{
     console.log(x)
 }
 func2("I am an arrow function")
+{
+    const sum = (a,b) =>{
+        return a+b
+    }
+    console.log(sum)
+    console.log(typeof sum)
+    console.log(sum(2,3))
+}
+
+
+
+
+
+// practice
+{
+    // vowels counting in string
+    let fullName = "Nihar Debnath";
+    function vowels(name) {
+        let count = 0;
+        for (const element of name) {
+            if(element === "i" || element === "I" || element === "a" || element === "A" || element === "E" || element === "e" || element === "o" || element === "O" || element === "u" || element === "U"){
+                count++
+            }
+        }
+        return count;
+    }
+    let numberOfVowels = vowels(fullName);
+    console.log(`There are ${numberOfVowels} vowels in the name ${fullName}`)
+    
+    
+    // vowels counting in string with arrow function
+    const vowels2 = (str) => {
+        let count = 0;
+        for (const element of str) {
+            if(element === "i" || element === "I" || element === "a" || element === "A" || element === "E" || element === "e" || element === "o" || element === "O" || element === "u" || element === "U"){
+                count++
+            }
+        }
+        return count;
+    }
+    let numberOfVowels2 = vowels2(fullName);
+    console.log(`There are ${numberOfVowels2} vowels in the name ${fullName}`)
+}

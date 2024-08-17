@@ -1,7 +1,17 @@
+console.log("Event Handling")
 let button = document.getElementById("btn")
 
 // button.addEventListener("click", ()=>{
 //     alert("Hello There.......")
+// })
+
+
+// button.addEventListener("click", (e)=>{
+//     console.log(e)
+//     console.log(e.type)
+//     console.log(e.target)
+//     console.log(e.clientX)
+//     console.log(e.clientY)
 // })
 
 // button.addEventListener("click", ()=>{
@@ -24,7 +34,7 @@ let button = document.getElementById("btn")
 // }) // first open console on web window, second click on the button and type anything in your keyboard
 
 
-document.addEventListener("keydown", (e)=>{
-    console.log(e.key , e.keyCode)
-}) // no need to click on the button, just type
-// keycode is deprecated, so we should not use keycode
+// document.addEventListener("keydown", (e)=>{
+//     console.log(e.key , e.keyCode)
+// }) // click on the button and type
+// // keycode is deprecated, so we should not use keycode
