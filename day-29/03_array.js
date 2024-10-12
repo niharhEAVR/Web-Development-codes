@@ -35,17 +35,17 @@ console.log("Filter")
 }
 {
     let arr = [1,2,4,3.4,5.5,34,5,9,11,13,7]
-    const lessThanSeven = (element =>{
+    const evenVlues = (element =>{
         return element%2 === 0
     })
-    console.log(arr.filter(lessThanSeven))
+    console.log(arr.filter(evenVlues))
 }
 {
     let arr = [1,2,4,3.4,5.5,34,5,9,11,13,7]
-    const lessThanSeven = (element =>{
+    const lessThanValues = (element =>{
         return element <= 11
     })
-    console.log(arr.filter(lessThanSeven))
+    console.log(arr.filter(lessThanValues))
 }
 {
     // practice
@@ -79,7 +79,8 @@ console.log("Reduce")
 }
 {
     // practice
-    let num = prompt("Enter a number: ")
+    // let num = prompt("Enter a number: ")
+    let num = 5;
     let arr = [];
     for(let i = 0; i<num; i++){
         arr[i] = i+1;

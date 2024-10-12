@@ -28,12 +28,19 @@
 // {
 //     // this is how you can iteriate a string using  for-of loop (for single sigle characters)
 //     let name = "Nihar Debnath";
+//     let arr = ["n",4,5,"f","he","efj",6,false,true,undefined]
 //     for (const element of name) { // iterator -> characters
 //         console.log(`element = ${element}`)
 //     }
+//     console.log("\n")
+//     for (const element of arr) { // iterator -> characters
+//         console.log(`element = ${element}`)
+//     }
+// }
 
 
 //     // another good use of for-of loop is to find a string size
+// {
 //     let language = "Javascript"; 
 //     let stringLength = 0; 
 //     for (const element of language) {
@@ -68,27 +75,38 @@
 //         const element = data[key];
 //         console.log(key,":", element)
 //     }
+//     console.log("\n")
+
+//     let arr = ["n",4,5,"f","he","efj",6,false,true,undefined]
+//     for (const values in arr) {
+//         console.log(values)
+//     }
+//     for (const values in arr) {
+//         const element = arr[values]
+//         console.log(element)
+//     }
+        
 // }
 
 
 
 
 
-{
-    // Returns a random integer from 0 to 9
-    let randomNumber = Math.floor(Math.random()*10);
-    console.log(`The random number is: ${randomNumber}`);
-}
-{
-    // Returns a random integer from 1 to 99:
-    let randomNumber = Math.floor(Math.random()*100)+1;
-    console.log(`The random number is: ${randomNumber}`);
-}
-{
-    // Returns a random integer from 1 to 100:
-    let randomNumber = Math.floor(Math.random()*101)+1;
-    console.log(`The random number is: ${randomNumber}`);
-}
+// {
+//     // Returns a random integer from 0 to 9
+//     let randomNumber = Math.floor(Math.random()*10);
+//     console.log(`The random number is: ${randomNumber}`);
+// }
+// {
+//     // Returns a random integer from 1 to 99:
+//     let randomNumber = Math.floor(Math.random()*100)+1;
+//     console.log(`The random number is: ${randomNumber}`);
+// }
+// {
+//     // Returns a random integer from 1 to 100:
+//     let randomNumber = Math.floor(Math.random()*101)+1;
+//     console.log(`The random number is: ${randomNumber}`);
+// }
 // this is how you can controll the Math.random function
 
 

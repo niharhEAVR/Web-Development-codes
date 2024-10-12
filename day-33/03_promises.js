@@ -13,15 +13,14 @@
 
 // })
 
-// prom.then((a) =>{
-//     console.log(a)
+// prom.then((data) =>{
+//     console.log(data)
 // })
 
-// prom.then((a) =>{
-//     console.log(a)
-// }).catch((err) =>{
+// prom.catch((err) =>{
 //     console.log(err)
 // })
+// console.log(prom)
 
 
 
@@ -136,5 +135,6 @@
     //     console.log("Promise rejected: ",error)
     // })
     // console.log(promise)
+
     // .catch is catching the error
 }

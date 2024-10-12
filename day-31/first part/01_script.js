@@ -1,28 +1,28 @@
-// document.querySelector(".container").innerHTML
-// document.querySelector(".container").innerText
-// document.querySelector(".box").innerHTML
+console.log(document.querySelector(".container").innerHTML)
+console.log(document.querySelector(".container").innerText)
+console.log(document.querySelector(".box").innerHTML)
 
 // ** innerhtml provides that inside elements of that container but outerhtml will provide that container with inside elements all togather
 
-// document.querySelector(".container").outerHTML
+console.log(document.querySelector(".container").outerHTML)
 
 
 // -----------------------------------------------
 
 
-// document.querySelector(".container").tagName
-// document.body.firstElementChild.firstChild.nodeName
+console.log(document.querySelector(".container").tagName)
+console.log(document.body.firstElementChild.firstChild.nodeName)
 // ** nodename and tagname is almost same
 
 
 // -----------------------------------------------
 
 
-// document.querySelector(".container").hidden
+console.log(document.querySelector(".container").hidden)
 
 // **the upper line is asking the html that the container is hidden or not, if not it will give 'false' or if yes it will ptint 'true'
 
-// document.querySelector(".container").hidden = "true"
+// console.log(document.querySelector(".container").hidden = "true")
 
 // **the upper line is forcing the html to hide the container element, it will look like this <div class="container" hidden>…</div>
 
@@ -31,21 +31,21 @@
 
 
 // ** i can change the text inside and inner html
-// document.querySelector(".box").innerHTML
-// document.querySelector(".box").innerHTML = "Hey my name is nihar"
+// console.log(document.querySelector(".box").innerHTML)
+// console.log(document.querySelector(".box").innerHTML = "Hey my name is nihar")
 
 
 // ---------------------------------------------------
 
 
-// document.body.querySelector(".box").getAttribute("id")
-// document.body.querySelector(".box").getAttribute("name")
-// document.body.querySelector(".box").getAttribute("class")
+// console.log(document.body.querySelector(".box").getAttribute("id"))
+// console.log(document.body.querySelector(".box").getAttribute("name"))
+// console.log(document.body.querySelector(".box").getAttribute("class"))
 // document.body.querySelector(".box").setAttribute("name","ryzen")
 // ** the upline changes the name from boxer to ryzen
 
-//document.body.firstElementChild.children[1].hasAttribute("id")
-// document.querySelector(".box").hasAttribute("id")
+// console.log(document.body.firstElementChild.children[1].hasAttribute("id"))
+// console.log(document.querySelector(".box").hasAttribute("id"))
 // document.body.firstElementChild.children[1].removeAttribute("id")
 
 
@@ -89,5 +89,5 @@
 //-----------------------------------------------------
 
 
-// document.body.firstElementChild.children[3].dataset
-// document.body.firstElementChild.children[4].dataset
+console.log(document.body.firstElementChild.children[3].dataset)
+console.log(document.body.firstElementChild.children[4].dataset)

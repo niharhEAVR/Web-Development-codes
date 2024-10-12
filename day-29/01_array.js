@@ -67,6 +67,7 @@ console.log(arr[7])
     // concat method doesnot change the original array
     arr1.concat(arr2);
     console.log(arr1);
+    console.log("\n");
 }
 
 
@@ -75,6 +76,8 @@ console.log(arr[7])
     let a =[5,3,79,35,1,2]
     a.sort()
     console.log(a)
+    console.log("\n");
+
 }
 
 

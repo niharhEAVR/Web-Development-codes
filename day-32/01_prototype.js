@@ -1,6 +1,6 @@
 const student = {
     name: "Nihar Debnath",
-    cgpa: 7.8,
+    cgpa: 7.1,
     printCGPA: function () {
         console.log(`total cgpa: ${this.cgpa}`) // student.cgpa
     }
@@ -8,23 +8,27 @@ const student = {
 
 console.log(student)
 console.log(student.cgpa)
-console.log(student.printCGPA())
+console.log(student.printCGPA()) // this line must be showing undefined in the browser console, mannually run the command and you get to see that why its happening
 console.log(student.printCGPA)
 console.log(student.constructor) // this is prototype object's property, there is many more
 
 
 //There is another shortcut method to create a function inside a object
 const employee = {
+    tax : "30%",
+
     // calTax: function (){
-    //     console.log("Tax rate is 30%")
+    //     console.log(`Tax rate is ${this.tax}`)
     // }
     // Instead of this we can do this down
     calTax(){
-        console.log("Tax rate is 30%")
+        console.log(`Tax rate is ${this.tax}`)
     },
     random: "random"
 }
 console.log(employee.calTax())
+
+
 
 const niharDebnath = {
     name: "nihar",
