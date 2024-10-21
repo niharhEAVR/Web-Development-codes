@@ -25,3 +25,19 @@ console.log(newObj)
 
 const spreadThenAddObj = {...tinderUser , ...meme} // and this is the method we will gonna use 90% of the time in our coding journey // that three dots actually spreads the key value pairs
 console.log(spreadThenAddObj)
+
+console.log("\n")
+
+console.log(Object.keys(newObj))
+console.log(Object.values(newObj))
+console.log(Object.entries(newObj))
+console.log(newObj.hasOwnProperty('name'))
+
+
+const course = {
+    coursename : "Rust",
+    courseFees : 1999,
+    courseInstructor : "Nihar"
+}
+const {courseFees : Fees} = course // this si how we can destructure a object, means that we can change the name of our object keys from this way
+console.log(Fees.toLocaleString("en-In"))
