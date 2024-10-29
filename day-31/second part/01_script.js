@@ -1,40 +1,28 @@
 console.log("Event Handling")
-let button = document.getElementById("btn")
+let button1 = document.getElementById("btn")
 
-// button.addEventListener("click", ()=>{
-//     alert("Hello There.......")
-// })
-
-
-// button.addEventListener("click", (e)=>{
-//     console.log(e)
-//     console.log(e.type)
-//     console.log(e.target)
-//     console.log(e.clientX)
-//     console.log(e.clientY)
-// })
-
-// button.addEventListener("click", ()=>{
-//     document.querySelector(".box").innerHTML = "Boom! Boom!"
-// })
+button1.addEventListener("click", (e)=>{
+    alert("Hello There.......")
+    console.log(e)
+    console.log(e.type)
+    console.log(e.target)
+    console.log(e.clientX)
+    console.log(e.clientY)
+    document.querySelector(".box").innerHTML = "Boom! Boom!"
+})
 
 
-// button.addEventListener("dblclick", ()=>{
-//     document.body.style.backgroundColor = "aqua"
-// }) // you have to double click it
+document.getElementById("btn2").addEventListener("dblclick", ()=>{
+    document.body.style.backgroundColor = "aqua"
+}) // you have to double click it
 
 
-// button.addEventListener("contextmenu", ()=>{
-//     document.body.style.backgroundColor = "tomato"
-// }) // you have to right click on the button
+document.getElementById("btn3").addEventListener("contextmenu", ()=>{
+    document.body.style.backgroundColor = "tomato"
+}) // you have to right click on the button
 
 
-// button.addEventListener("keydown", (e)=>{
-//     console.log(e)
-// }) // first open console on web window, second click on the button and type anything in your keyboard
-
-
-// document.addEventListener("keydown", (e)=>{
-//     console.log(e.key , e.keyCode)
-// }) // click on the button and type
-// // keycode is deprecated, so we should not use keycode
+document.getElementById("btn4").addEventListener("keydown", (e)=>{
+    console.log(e)
+    console.log(e.key , e.keyCode)
+}) // first open console on web window, second click on the button and type anything in your keyboard

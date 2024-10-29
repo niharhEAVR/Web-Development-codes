@@ -1,22 +1,21 @@
 function box(height, width){
-    let output = '';
+    let column = '';
     for (let i = 0; i < height; i++) {
-        let line  = '';       
+        let row  = '';       
         for (let j = 1; j <= width+1; j++) {
             if(j === width+1){
-                line += new Date().toLocaleTimeString()
+                row += new Date().toLocaleTimeString()
             }else{
-                line += '* '
+                row += '* '
             }
         }
-        output += line + '\n'
+        column += row + '\n'
     }
-    return output
+    return column
 }
 
-// let h = parseInt(prompt('Enter the height of the box in numbers:'))
-// let w = parseInt(prompt('Enter the width of the box in numbers:'))
+let h = parseInt(prompt('Enter the height of the box in numbers:'))
+let w = parseInt(prompt('Enter the width of the box in numbers:'))
 
-// box(h,w)
-let starBox = box(4,3)
+let starBox = box(h,w)
 console.log(starBox)

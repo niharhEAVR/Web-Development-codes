@@ -37,10 +37,10 @@
     let b = "BANANA"
     console.log(a.toUpperCase())
     console.log(b.toLowerCase())
-    // this slice property is exactly like python slice, so the first index number will include and the last one will not include 
-    console.log(a.slice(1,4))
-    // only one value will print the rest after that included index, no slicing after that
-    console.log(a.slice(1))
+    
+    console.log(a.slice(1,4)) // this slice property is exactly like python slice, so the first index number will include and the last one will not include 
+
+    console.log(a.slice(1)) // only one value will print the rest after that included index, no slicing after that
 
 
     console.log(b.replace("ANA", "999"))
@@ -48,12 +48,12 @@
 
 
     b = b.replace("BA", "69")
-    console.log(b)// having the mutability but we can do this though
+    console.log(b) // i think you have enough knowledge to understand this, but if you not then check the 05_notes.md
 
 
 
     console.log(b.concat(" ",a))
-    console.log(b.concat(a, " pie"))
+    console.log(b.concat(a," pie"))
 
     let name = "           nihar debnath            ";
     console.log(name.trim())

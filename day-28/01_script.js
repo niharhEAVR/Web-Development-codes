@@ -35,7 +35,7 @@ let a1 = 5;
 }
 console.log(a1)
 // console.log(b1)
-// when we use let variable outside the block it will give error
+// when we use let variable outside the block it will give undefined
 console.log("\*var usage\*")
 var a12 = 10;
 {
@@ -68,26 +68,27 @@ console.log("\*Primitive datatypes\*")
 
 console.log("\*Objects\*")
 {
-    let n1 = {
+    let myObj = {
         name : "nihar",
         profession : "student",
         age : 19
     }
-    console.log(n1)
-    n1.learning = "Web Development"
-    console.log(n1)
-    n1.learning = "Web Development + web3 + devops"
-    console.log(n1)
+    console.log(myObj)
+    myObj.learning = "Web Development"
+    console.log(myObj)
+    myObj.learning = "Web Development + web3 + devops"
+    console.log(myObj)
 
     // printing value of objects (single)
-    console.log(n1.name)
-    console.log(n1["learning"])
+    console.log(myObj.name)
+    console.log(myObj["learning"])
     // the both ways you can print object values
 
-    n1.age = n1.age + 1;
-    console.log(n1.age);
+    myObj.age = myObj.age + 1;
+    console.log(myObj.age);
     // updating the age 
 
-    console.log(typeof n1.age)
+    console.log(typeof myObj)
+    console.log(typeof myObj.age)
 }
 

@@ -5,7 +5,7 @@ console.log(myName)
 
 
 // ==================== Number ========================
-let balance = new Number(3090.59)
+let balance = new Number(3090.6993)
 console.log(balance)
 console.log(`Your total Balance = ${balance.toFixed(2)}`)
 console.log(balance.toPrecision(5)) // this functionn roundoff the number

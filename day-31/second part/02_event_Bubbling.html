@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Bubbling</title>
     <style>
-        .container{
-            background-color: lightcoral;
-            border: 2px solid black;
-            padding: 14px;
-            margin: 14px;
-            cursor: pointer;
-        }
-        .childContainer{
-            background-color: cornflowerblue;
-            border: 2px solid black;
-            padding: 14px;
-            margin: 14px;
-            cursor: pointer;
-        }
-        .child{
-            background-color: chartreuse;
-            border: 2px solid black;
-            padding: 14px;
-            margin: 14px;
-            cursor: pointer;
-        }
+      .container {
+        background-color: lightcoral;
+        border: 2px solid black;
+        padding: 14px;
+        margin: 14px;
+        cursor: pointer;
+      }
+      .childContainer {
+        background-color: cornflowerblue;
+        border: 2px solid black;
+        padding: 14px;
+        margin: 14px;
+        cursor: pointer;
+      }
+      .child {
+        background-color: chartreuse;
+        border: 2px solid black;
+        padding: 14px;
+        margin: 14px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      (click me)
+      <section class="childContainer">
         (click me)
-        <section class="childContainer">
-            (click me)
-            <div class="child">I am a Child (click me)</div>
-        </section>
+        <div class="child">I am a Child (click me)</div>
+      </section>
     </div>
     <script src="./02_script.js"></script>
   </body>

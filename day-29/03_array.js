@@ -1,3 +1,5 @@
+document.title = 'Array Properties'
+
 console.log("Map")
 {
     let arr = [1,2,4,11,13,7]
@@ -99,9 +101,9 @@ console.log("Reduce")
 
 
 
-// you i want to form a random array using prompt then we use this Array.from method
+// if you want to form a random array using prompt then we use this Array.from method
 {
-    const arr = Array.from("nihar")
+    const arr = Array.from("nihar") //this actually form the string into new array
     console.log(arr)
 }
 

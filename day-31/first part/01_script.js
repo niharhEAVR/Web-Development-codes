@@ -10,42 +10,45 @@ console.log(document.querySelector(".container").outerHTML)
 // -----------------------------------------------
 
 
+console.log("\n\n\n")
 console.log(document.querySelector(".container").tagName)
 console.log(document.body.firstElementChild.firstChild.nodeName)
-// ** nodename and tagname is almost same
+// ** nodename and tagname is almost same,, if you wan to know the difference read 01_notes.md
 
 
 // -----------------------------------------------
 
 
+console.log("\n\n\n")
 console.log(document.querySelector(".container").hidden)
-
 // **the upper line is asking the html that the container is hidden or not, if not it will give 'false' or if yes it will ptint 'true'
 
-// console.log(document.querySelector(".container").hidden = "true")
 
+// console.log(document.querySelector(".container").hidden = "true")
 // **the upper line is forcing the html to hide the container element, it will look like this <div class="container" hidden>…</div>
 
 
 // -------------------------------------------------
 
 
+console.log("\n\n\n")
 // ** i can change the text inside and inner html
-// console.log(document.querySelector(".box").innerHTML)
+console.log(document.querySelector(".box").innerHTML)
 // console.log(document.querySelector(".box").innerHTML = "Hey my name is nihar")
 
 
 // ---------------------------------------------------
 
 
-// console.log(document.body.querySelector(".box").getAttribute("id"))
-// console.log(document.body.querySelector(".box").getAttribute("name"))
-// console.log(document.body.querySelector(".box").getAttribute("class"))
+console.log("\n\n\n")
+console.log(document.body.querySelector(".box").getAttribute("id"))
+console.log(document.body.querySelector(".box").getAttribute("name"))
+console.log(document.body.querySelector(".box").getAttribute("class"))
 // document.body.querySelector(".box").setAttribute("name","ryzen")
 // ** the upline changes the name from boxer to ryzen
 
-// console.log(document.body.firstElementChild.children[1].hasAttribute("id"))
-// console.log(document.querySelector(".box").hasAttribute("id"))
+console.log(document.body.firstElementChild.children[1].hasAttribute("id"))
+console.log(document.querySelector(".box").hasAttribute("id"))
 // document.body.firstElementChild.children[1].removeAttribute("id")
 
 
@@ -56,7 +59,7 @@ console.log(document.querySelector(".container").hidden)
     let newButton = document.createElement("button");
     newButton.innerHTML = "Insertion! <b><i>it has been inserted by me</i></b>";
     newButton.setAttribute("class", "battu");
-
+    
     document.querySelector(".container").append(newButton); // append will insert the tag inside that container element , but at the end
     // document.querySelector(".container").prepend(newButton); // prepend will insert the tag inside that container element , but at the top
     
@@ -74,8 +77,8 @@ console.log(document.querySelector(".container").hidden)
 
 
 // document.body.firstElementChild.setAttribute("class","rectangle") // this line will overwrite the container class 
-// document.body.firstElementChild.classList.add("rectangle") // this line will add another class beside the container class
-// document.body.firstElementChild.classList.remove("rectangle") // this line will remove that extra class beside the container class
+// document.body.firstElementChild.classList.add("helloRectangle") // this line will add another class beside the container class
+// document.body.firstElementChild.classList.remove("helloRectangle") // this line will remove that extra class beside the container class
 
 
 //-------------------------------------------------------
@@ -89,5 +92,6 @@ console.log(document.querySelector(".container").hidden)
 //-----------------------------------------------------
 
 
+console.log("\n\n\n")
 console.log(document.body.firstElementChild.children[3].dataset)
 console.log(document.body.firstElementChild.children[4].dataset)

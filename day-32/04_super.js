@@ -65,7 +65,7 @@
             super(name)
             this.sleepingTime = hour
         }
-        sleep(){
+        sleepAndEat(){
             super.eat()
             console.log("Obviously child sleep")
         }
@@ -73,5 +73,7 @@
     
     let nihar = new bcaStudent("sleeps for 14 hours","Nihar")
     console.log(nihar)
-    console.log(nihar.sleep())
+    console.log(nihar.nameOfThePeople)
+    nihar.sleepAndEat()
+
 }

@@ -8,7 +8,7 @@ const student = {
 
 console.log(student)
 console.log(student.cgpa)
-console.log(student.printCGPA()) // this line must be showing undefined in the browser console, mannually run the command and you get to see that why its happening
+student.printCGPA()
 console.log(student.printCGPA)
 console.log(student.constructor) // this is prototype object's property, there is many more
 
@@ -26,7 +26,7 @@ const employee = {
     },
     random: "random"
 }
-console.log(employee.calTax())
+employee.calTax()
 
 
 
@@ -41,7 +41,7 @@ const harshVardhan = {
 niharDebnath.__proto__ = employee
 harshVardhan.__proto__ = employee
 console.log(niharDebnath)
-console.log(niharDebnath.calTax())
+niharDebnath.calTax()
 console.log(niharDebnath.random)
 console.log(harshVardhan)
 
@@ -65,4 +65,4 @@ const mannu = {
 }
 mannu.__proto__ = tax
 console.log(mannu)
-console.log(mannu.calTax()) // 5% will be printed , because of the own object function same as prototype function
+mannu.calTax() // 5% will be printed , Since mannu has its own calTax method, JavaScript doesn’t need to check the prototype (tax).

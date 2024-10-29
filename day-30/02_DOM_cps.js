@@ -1,16 +1,17 @@
 console.log("\*Child\*")
 
 console.log(document.body.childNodes)
-// console.log(document.body.childNodes[0])   // this numbers are index values
-// console.log(document.body.childNodes[1])
-// console.log(document.body.childNodes[2])
-// console.log(document.body.childNodes[3])
-// console.log(document.body.childNodes[4])
-// console.log(document.body.childNodes[5])
-// console.log(document.body.childNodes[3].childNodes[2])
-// console.log(document.body.childNodes[3].childNodes[2].childNodes)
+console.log(document.body.childNodes[0])   // this numbers are index values
+console.log(document.body.childNodes[1])
+console.log(document.body.childNodes[2])
+console.log(document.body.childNodes[3])
+console.log(document.body.childNodes[4])
+console.log(document.body.childNodes[5])
+console.log(document.body.childNodes[3].childNodes[2])
+console.log(document.body.childNodes[3].childNodes[2].childNodes)
 
 
+console.log("\n\n\n")
 let cont = document.body.childNodes[3]
 console.log(cont.firstChild)
 console.log(cont.firstElementChild)
@@ -23,6 +24,7 @@ console.log(cont.lastElementChild)
 
 
 
+console.log("\n\n\n")
 console.log("\*Parent\*")
 
 let cont2 = document.body.childNodes[3]
@@ -31,10 +33,14 @@ console.log(cont2.lastElementChild.parentNode)
 // console.log(cont2.lastElementChild.parentElement.parentElement)
 console.log(cont2.parentElement) //short form of the upline
 
+// what is the difference between parentNode and parentElement
+// If the parent is an actual DOM element, both parentNode and parentElement give you the same result.
+// If the parent isn’t an element (like a DocumentFragment), parentElement will return null.
 
 
 
 
+console.log("\n\n\n")
 console.log("\*All childrens\*")
 
 console.log(document.body.childNodes[3].children)

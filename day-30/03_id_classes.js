@@ -16,7 +16,8 @@ console.log(document.querySelectorAll(".box")) // this all method will include t
 // to change their existing property we have to use foreach loop for array
 // because this is a html collection array
 document.querySelectorAll(".box").forEach (element =>{
-    element.style.color = "red"
+    element.style.color = "magenta"
+    element.style.fontSize = '20px'
 })
 
 
@@ -30,7 +31,8 @@ console.log(element2[6].matches("#box5"))
 
 
 // closest property will find the relation of the closest tag
-console.log(element2[2].closest(".box"))
+console.log(element2[2])
+console.log(element2[2].closest(".box")) // closest will "return itself" (i.e., the element it’s called on) if it matches the selector
 console.log(element2[2].closest(".container"))
 console.log(element2[2].closest("body"))
 console.log(element2[2].closest("html"))
