@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object fit</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: aquamarine;
+            border: solid 1px black;
+
+        }
+
+        img{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            /* object-fit: contain; */
+            /* object-fit: fill; */
+            /* object-position: bottom right; */
+            /* object-position: 10px 20px; */
+            object-position: bottom ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <img src="../day 10/image.jpg" alt=""> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #box{
+            background-color: blue;
+            color: aliceblue;
+            border: 2px solid blue;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hello World!</div>
+    </div>
+    <button id="btn">Click</button> <br><br>
+    <button id="btn2">Double Click</button><br><br>
+    <button id="btn3">Right Click</button><br><br>
+    <button id="btn4">Open console then Click and type on keyboard</button>
+    <br><br><br>
+    
+
+
+    <button onclick="console.log('Chin tapak dum dum'); alert('open console')">Chin tapak dum dum</button>
+    <!-- we have written some inline javascript like this way-->
+    
+    
+    
+    <br><br><br>
+    <button id="darkLight">Click to change screen's mode</button>
+
+    <br><br><br>
+    <div id="box">hover over me</div>
+
+    <script>
+        let hover = document.getElementById("box")
+        hover.onmouseover = ()=>{
+            alert('ohhh yesssssss!')
+            hover.style.backgroundColor = "lightgreen"
+            hover.style.color = "black"
+        }
+    </script>
+
+
+
+
+    <script src="./01_script.js"></script>
+    <script src="./01_darkLight.js"></script>
+    <!-- when you are using dom method please use the script tag at end of the body  -->
+</body>
+</html>

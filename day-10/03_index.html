@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+
+        /* Child Selectors  */
+        /* this will only work for direct child  */
+        .red > p {
+            color: blue;
+            background-color: beige;
+            text-align: center;
+        }
+
+        /* Descendant Selector  */
+        /* this will find child the anywhere */
+        div p {
+            text-align: center;
+            color: white;
+            background-color: brown;
+        }
+
+
+        /* Pseudo Selector  */
+        a:visited{
+            color: black;
+        }
+
+        a:link {
+            color: green;
+        }
+
+        #youtube:active{
+            background-color: red;
+        }
+
+        a:hover{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">
+        <article>        </article>
+
+            <p>I am a para inside div</p>
+
+    </div>
+    <div>
+        <article>
+            <p>I am a para inside div</p>
+        </article>
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+    <a id="youtube" href="https://www.youtube.com">Go to Youtube</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        .img{
+            width: 400px;
+
+        }
+        .img1{
+            filter: blur(5px);
+        }
+        .img21{
+            filter:brightness(50%);
+        }
+        .img22{
+            filter:grayscale(80%);
+        }
+        .img23{
+            filter:sepia(100%);
+        }
+        .img24{
+            filter:invert(1);
+        }
+        .img25{
+            filter:opacity(.3);
+        }
+        .img26{
+            /* two or more property can written like this  */
+            filter:brightness(80%) blur(3px);
+        }
+        .img3{
+            filter: contrast(200%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img img1" src="./sonam.jpg" alt="">
+        <img class="img img21" src="./sonam.jpg" alt="">
+        <img class="img img22" src="./sonam.jpg" alt="">
+        <img class="img img23" src="./sonam.jpg" alt="">
+        <img class="img img24" src="./sonam.jpg" alt="">
+        <img class="img img25" src="./sonam.jpg" alt="">
+        <img class="img img26" src="./sonam.jpg" alt="">
+        <img class="img img3" src="./sonam.jpg" alt="">
+    </div>
+</body>
+</html>

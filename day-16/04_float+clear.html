@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Float & Clear</title>
+    <style>
+      .cards{
+        border: 2px solid black;
+        padding: 10px;
+      }
+      .cards{
+        margin-top: 10px;
+        border: 2px solid black;
+        display: flow-root;
+        /* this will not let the image to overflow  */
+        padding: 10px;
+      }
+
+      img {
+        float: right;
+      }
+
+      .card {
+        border: 2px solid red;
+        margin: 10px;
+      }
+
+      .card:nth-child(3) {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img src="./image.jpg" alt="" width="230" />
+      <div class="card">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+          fugiat ab tenetur praesentium sequi, nisi nesciunt officiis magnam ut
+          at voluptatibus sapiente ducimus deleniti esse alias nihil. Soluta
+          iure ipsum voluptatibus assumenda ratione ut?
+        </p>
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
+        explicabo dignissimos a et sapiente sunt assumenda cupiditate veniam
+        cumque ipsa? Autem quod, id itaque velit cupiditate ea quia sit
+        laudantium asperiores. Culpa fuga libero odio consequatur et totam
+        ratione tempore eos ipsum, soluta omnis, fugiat facere? Quam neque a
+        pariatur debitis quos vero maiores, porro, voluptatum
+      </div>
+      <div class="card">Card 3</div>
+    </div>
+    <div class="cards">
+      <img src="./image.jpg" alt="" width="230" />
+      <div class="card">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+          fugiat ab tenetur praesentium sequi, nisi nesciunt officiis magnam ut
+          at voluptatibus sapiente ducimus deleniti esse alias nihil. Soluta
+          iure ipsum voluptatibus assumenda ratione ut?
+        </p>
+      </div>
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+h1{
+    background-color: crimson;
+    color: aliceblue;
+    text-align: center;
+    width: 450px;
+    height: 100px;
+    border: solid 5px rgb(8, 12, 240);
+    border-radius: 200px;
+    /* border radius use for round edges or you can make your corner rounded */
+}
+span{
+    background-color: crimson;
+    color: aliceblue;
+    width: 450px;
+    height: 100px;
+    border: solid 5px rgb(8, 12, 240);
+    border-radius: 5px;
+}
+
+#para1{
+    background-color: yellow;
+    text-align: center;
+
+    border-style:solid;
+    border-width: 3px;
+    border-color: crimson;
+    /* you can write this three line of code in one line  */
+    border: dashed 3px crimson;
+    
+    /* if you want only one side should became rounded use  */
+    border-top-left-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+#para2{
+    background-color: #00FF00;
+    border-top: dashed 3px #7B68EE;
+    border-bottom: dashed 3px #7B68EE;
+}
+
+
+#para3{
+    background-color: lightgray;
+    border: solid 15px darkgreen;
+    padding: 50px;
+    margin-left: 260px;
+    width: 600px;
+}
+#para4{
+    background-color: lightgray;
+    border: solid 15px blue;
+    width: 600px;
+    /* padding-left: 30px;
+    padding-right: 50px;
+    padding-top: 45px;
+    padding-bottom: 35px; */
+    padding: 35px  45px  55px   65px;
+          /* Top   Right Bottom Left  */
+    /* padding in all side but in one line  */
+    margin: 0px 0px 0px 260px;
+    /* margin in left side but using one line  */
+    
+}
+
+*{
+    background: #E6E6FA;
+}
+#para5{
+    background-color: pink;
+    width: 800px;
+    border: solid 3px gray;
+    padding: 60px;
+}
+#para6{
+    background-color: pink;
+    width: 800px;
+    border: solid 3px gray;
+    padding: 20px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text shadow</title>
+    <style>
+        .container{
+            background-color: beige;
+            /* height: 750px; */
+            width: 100vh;
+            padding: 50px;
+            margin: 10px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        #head1{
+            text-shadow: 13px -13px rgb(236, 22, 7);
+        }
+        #head2{
+            text-shadow: 13px 13px ;
+            /* By default the text shadows color is black  */
+        }
+        #head3{
+            text-shadow: 13px 13px 3px rgb(50, 20, 220);
+            /* Third length is for blur effect */
+        }
+        #head4{
+            text-shadow: -1px -1px red, -1px 1px green, 1px 1px blue;
+        }
+        .box{
+            background-color: black;
+            height: 200px;
+            width: 200px;
+            color: white;
+            padding: 60px;
+            align-content: center;
+            text-shadow: 1px 1px 2px red, 0 0 1em green, 0 0 0.2em blue;
+        }
+        .box2{
+            background-color: black;
+            height: 200px;
+            width: 200px;
+            margin-top: 20px;
+            color: white;
+            padding: 60px;
+            align-content: center;
+            text-shadow: 1px 0px 10px beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="head1">Welcome to This Page</h1>
+        <br>
+        <h1 id="head2">Welcome to This Page</h1>
+        <br>
+        <h1 id="head3">Welcome to This Page</h1>
+        <br>
+        <h1 id="head4">Welcome to This Page</h1>
+        <br>
+        <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime deleniti, at sit iste beatae corporis officia perferendis maiores...</div>
+        <div class="box2"><h1>You are wondering about the glowing text.</h1></div>
+    </div>
+</body>
+</html>

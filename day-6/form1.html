@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+</head>
+<body>
+    <h1>Event Registration</h1>
+    <form action="Backend.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required autofocus>
+        <br>
+        <br>
+        <label for="Phone">Phone:</label>
+        <input type="number" id="phone">
+        <br>
+        <br>
+        Occupation:
+        <select name="occupation" id="occupation">
+            <option value="">Other</option>
+            <option value="">Worker</option>
+            <option value="">Employee</option>
+            <option value="">Salary man</option>
+        </select>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Topics of Interest:</legend>
+            <label for="a">HTML</label>
+            <input type="checkbox" id="a">
+            <label for="b">CSS</label>
+            <input type="checkbox" id="b">
+            <label for="c">JavaScript</label>
+            <input type="checkbox" id="c">
+        </fieldset>
+        <br>
+        <label for="comment">Comment:</label>
+        <br>
+        <textarea name="textBox" id="comment"
+        cols="20" rows="10" placeholder="Enter your text..." pattern="[a-zA-Z0-9]+"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

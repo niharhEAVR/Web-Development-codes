@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sizing</title>
+    <style>
+        .dotBox{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+            margin: 50px;
+            box-sizing: border-box;
+        }
+        .dotBox2{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <table border="3">
+        <thead><th colspan="2"><h2>Both the box have same size, padding and border size but one uses border-box and ones not, If you are confused whats the difference in the two box just check those boxes using developer tool</h2></th></thead>
+        <tr>
+            <td><div class="dotBox">This box have width 300px, height 300px, padding 100px, border 1px.</div></td>
+            <td><img src="./Screenshot (428).png" alt="image"></td>
+        </tr>
+        <tr>
+            <td><div class="dotBox2">This box is without using (box-sizing: border-box;) but the size, padding, border is same as previous one</div></td>
+            <td><img src="./Screenshot (429).png" alt="image"></td>
+        </tr>
+    </table>
+    
+    
+
+    
+</body>
+</html>

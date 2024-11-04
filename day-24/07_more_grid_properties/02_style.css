@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(124, 20, 243);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 0.4rem;
+    padding: 4rem;
+    border: 2px solid white;
+
+
+    /* justify-items: center; */
+    /* align-items: center; */
+    place-items: center;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 36, 14);
+    border: 2px solid white;
+
+
+    justify-self: end;
+    /* align-self: stretch;
+    place-self: stretch; */
+
+
+    /* use developer tool to check every property  */
+}

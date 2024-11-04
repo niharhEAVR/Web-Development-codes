@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: aliceblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #heading {
+            list-style-type: none;
+        }
+
+        #parent {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #parent2 {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .unordered-lists{
+            cursor: pointer;
+            border: 2px solid red;
+            padding: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="unordered-lists">
+        <li id="heading">
+            <h1>click on the images</h1>
+        </li>
+        <li><img width="400px"
+                src="https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896"
+                id="human" alt=""></li>
+        <li><img width="400px"
+                src="https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
+                id="tiger" alt=""></li>
+        <li><img width="400px"
+                src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg"
+                id="cat" alt="" onclick="alert('cat click')"></li>
+        <li><a href="https://www.google.co.in/" rel="noopener" target="_blank" style="color: crimson;">Google</a></li>
+    </ul>
+
+    <div id="parent">
+        <h1>parent (click)</h1>
+        <p>Bubbling (default) phase</p>
+        <button id="child">Child (click)</button>
+    </div>
+    <div id="parent2">
+        <h1>parent2 (click)</h1>
+        <p>Capturing phase</p>
+        <button id="child2">Child2 (click)</button>
+    </div>
+
+    <script src="./02_script.js"></script>
+    <script src="./01_script.js"></script>
+</body>
+
+</html>

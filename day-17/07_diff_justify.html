@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some differneces of justify contents</title>
+    <style>
+        .con{
+            background-color: beige;
+            border: 2px solid black;
+            display:flex;
+            flex-direction: row;
+            /* flex-direction: column-reverse; */
+            justify-content:space-around;
+        }
+        .con2{
+            background-color: beige;
+            border: 2px solid black;
+            display:flex;
+            flex-direction: row;
+            /* flex-direction: column-reverse; */
+            justify-content:space-between;
+        }
+        .con3{
+            background-color: beige;
+            border: 2px solid black;
+            display:flex;
+            flex-direction: row;
+            /* flex-direction: column-reverse; */
+            justify-content:space-evenly;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+    <div class="con2">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+    <div class="con3">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+</body>
+</html>
