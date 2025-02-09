@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation</title>
-    <style>
-      * {
-        margin: 0px;
-        padding: 0px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .container {
+      background-color: beige;
+      border: 5px solid black;
+      width: 100vw;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #box1 {
+      background-color: aqua;
+      border: 2px solid black;
+      width: 200px;
+      height: 50px;
+      position: relative;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      animation: 3s ease-in-out 0s infinite alternate running box1;
+    }
+
+    #box2 {
+      background-color: tomato;
+      border: 2px solid black;
+      width: 200px;
+      height: 50px;
+      position: relative;
+      top: 84vh;
+      bottom: 0;
+      animation: 3s ease-in-out 0s infinite alternate-reverse running box2;
+    }
+
+    #circle {
+      background-color: greenyellow;
+      border: 2px solid black;
+      border-radius: 30px;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      animation: 5s ease-in-out 0s infinite alternate-reverse running circle1;
+    }
+
+    @keyframes box1 {
+      from {
+        left: 0;
       }
-      .container {
-        background-color: beige;
-        border: 5px solid black;
-        width: 100vw;
-        height: 100vh;
-        padding: 10px;
-        box-sizing: border-box;
+
+      to {
+        left: calc(100vw - 230px);
+        /* Adjust to prevent overflow */
       }
-      #box1 {
-        background-color: aqua;
-        border: 2px solid black;
-        width: 200px;
-        height: 50px;
-        position: relative;
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        animation: 3s ease-in-out 0s infinite alternate running box1;
+    }
+
+    @keyframes box2 {
+      from {
+        left: 0;
       }
-      #box2 {
-        background-color: tomato;
-        border: 2px solid black;
-        width: 200px;
-        height: 50px;
-        position: relative;
-        top: 760px;
-        animation: 3s ease-in-out 0s infinite alternate-reverse running box2;
+
+      to {
+        left: calc(100vw - 230px);
+        /* Adjust to prevent overflow */
       }
-      #circle {
-        background-color: greenyellow;
-        border: 2px solid black;
-        border-radius: 30px;
-        width: 50px;
-        height: 50px;
-        position: relative;
-        animation: 5s ease-in-out 0s infinite alternate-reverse running circle1;
+    }
+
+    @keyframes circle1 {
+      0% {
+        top: 0%;
+        left: 0%;
       }
-      @keyframes box1 {
-        from {
-          left: 0vw;
-        }
-        to {
-          left: 100vw;
-        }
+
+      25% {
+        top: 10%;
+        left: calc(100vw - 75px);
       }
-      @keyframes box2 {
-        from {
-          left: 0vw;
-        }
-        to {
-          left: 100vw;
-        }
+
+      50% {
+        top: 65%;
+        left: 0%;
       }
-      @keyframes circle1 {
-        0% {
-          top: 0%;
-          left: 0%;
-        }
-        25% {
-          top: 10%;
-          left: 100%;
-        }
-        50% {
-          top: 65%;
-          left: 0%;
-        }
-        100% {
-          top: 75%;
-          left: 100%;
-        }
+
+      100% {
+        top: 75%;
+        left: calc(100vw - 75px);
       }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="box" id="box1"></div>
-      <div class="box" id="box2"></div>
-      <div id="circle"></div>
-    </div>
-  </body>
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div id="circle"></div>
+  </div>
+</body>
+
 </html>
