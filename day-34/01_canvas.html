@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(51, 51);
+        ctx.stroke();
+
+
+
+        let isDrawing = false;
+        let startX, startY;
+        let shape = "circle"; // Can be "circle" or "rectangle"
+
+        canvas.addEventListener("mousedown", (e) => {
+            isDrawing = true;
+            startX = e.offsetX;
+            startY = e.offsetY;
+
+            shape = Math.random() >= 0.5 ? "circle" : "rectangle";
+            console.log("started drawing of " + shape + " at position: " + startX + " , " + startY);
+        });
+
+
+        let currentX, currentY;
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (!isDrawing) return;
+
+            currentX = e.offsetX;
+            currentY = e.offsetY;
+
+            // Live preview
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // clear previous shape
+
+            if (shape === "rectangle") {
+                const width = currentX - startX;
+                const height = currentY - startY;
+                ctx.strokeRect(startX, startY, width, height);
+            } else if (shape === "circle") {
+                const dx = currentX - startX;
+                const dy = currentY - startY;
+                // console.log(dx + " + " + dy + " = " + (dx + dy));
+
+                // console.log(dx * dx + dy * dy);
+
+                const radius = Math.sqrt(dx * dx + dy * dy);
+                // console.log(radius);
+
+
+                ctx.beginPath();
+                ctx.arc(startX, startY, radius, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+        });
+
+        canvas.addEventListener("mouseup", () => {
+            console.log("drawing stopped: " + currentX + " , " + currentY);
+            isDrawing = false;
+        });
+
+
+
+    </script>
+
+
+
+</html>
