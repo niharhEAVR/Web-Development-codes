@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drop File to View</title>
+    <style>
+        #dropZone {
+            width: 100%;
+            height: 150px;
+            border: 2px dashed #aaa;
+            text-align: center;
+            line-height: 150px;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dropZone">Drop an HTML, PDF, or image file here</div>
+    <iframe id="previewFrame"></iframe>
+
+    <script>
+        const dropZone = document.getElementById("dropZone");
+        const iframe = document.getElementById("previewFrame");
+
+        dropZone.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = "green";
+        });
+
+        dropZone.addEventListener("dragleave", () => {
+            dropZone.style.borderColor = "#aaa";
+        });
+
+        dropZone.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = "#aaa";
+
+            const file = e.dataTransfer.files[0];
+            if (!file) return;
+
+            const fileURL = URL.createObjectURL(file);
+            iframe.src = fileURL;
+        });
+    </script>
+</body>
+
+</html>

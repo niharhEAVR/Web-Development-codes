@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Example</title>
+  <style>
+    #dragItem {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      margin-bottom: 20px;
+      cursor: move;
+    }
+
+    #dropZone, #dropZone2 {
+      width: 200px;
+      height: 200px;
+      border: 2px dashed gray;
+      text-align: center;
+      line-height: 200px;
+      font-weight: bold;
+      color: gray;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h2>HTML Drag and Drop Demo</h2>
+
+  <!-- Draggable Box -->
+  <div id="dragItem" draggable="true">Drag Me</div>
+
+  <!-- Draggable Image -->
+  <img src="../day-8/image.jpeg" alt="normal guy" height="100" width="100" id="dragImage">
+  
+
+  <!-- Drop Zone -->
+  <div id="dropZone">Drop Here</div>
+  <br>
+  <div id="dropZone2">Drop Here</div>
+
+  <script>
+    const dragItem = document.getElementById('dragItem');
+    const dragImage = document.getElementById('dragImage');
+    const dropZone = document.getElementById('dropZone');
+    const dropZone2 = document.getElementById('dropZone2');
+
+
+    // When drag starts
+    dragItem.addEventListener('dragstart', function (event) {
+      event.dataTransfer.setData("text", event.target.id);
+    });
+
+    dragImage.addEventListener('dragstart', function (event) {
+      event.dataTransfer.setData("text", event.target.id);
+    });
+
+    // Allow drop (important)
+    dropZone.addEventListener('dragover', function (event) {
+      event.preventDefault(); // Without this, drop won’t work
+    });
+
+    // When item is dropped
+    dropZone.addEventListener('drop', function (event) {
+      event.preventDefault();
+      const data = event.dataTransfer.getData("text");
+      console.log(data);
+      const draggedElement = document.getElementById(data);
+      console.log(draggedElement);
+      dropZone.appendChild(draggedElement);
+      dropZone.style.color = "green";
+      dropZone.innerText = "Dropped!";
+    });
+
+    dropZone2.addEventListener('dragover', function (event) {
+      event.preventDefault(); // Without this, drop won’t work
+    });
+
+    // When item is dropped
+    dropZone2.addEventListener('drop', function (event) {
+      event.preventDefault();
+      const data = event.dataTransfer.getData("text");
+      console.log(data);
+      const draggedElement = document.getElementById(data);
+      console.log(draggedElement);
+      dropZone2.appendChild(draggedElement);
+      dropZone2.style.color = "green";
+      dropZone2.innerText = "Dropped!";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geolocation Example</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <p id="location">Click the below button to get your location.</p>
+    <button onclick="getLocation()" id="getLocation">Get Location</button>
+
+    <script>
+        function getLocation() {
+            // Check if geolocation is supported by the browser
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        let latitude, longitude;
+
+        function showPosition(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+
+            document.getElementById("location").innerText =
+                `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+            showLocation()
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+
+        function showLocation(latitude, longitude) {
+            document.getElementById('getLocation').insertAdjacentHTML('afterend', `<br><br><a href="https://www.google.com/maps?q=${latitude},${longitude}" target="_blank">Open in Google Maps</a>`)
+        }
+    </script>
+</body>
+
+</html>
