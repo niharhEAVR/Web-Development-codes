@@ -11,8 +11,8 @@ array.splice(2,2,69,919); // Removes 2 element from starting index 2 and adds th
 console.log(array); 
 
 
-let array2 = [1, 2, 3, 4, 5];
-let newArray = array2.slice(1, 4); // its start from the index 1 and stops to the value 4.
+let array2 = [1, 2, 3, 34, 5];
+let newArray = array2.slice(1, 4); // its start from the index 1, stops and exclude index 4 .
 console.log(newArray); 
 console.log(array2);    // (original array is unchanged)
 

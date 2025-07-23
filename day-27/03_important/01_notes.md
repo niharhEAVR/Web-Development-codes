@@ -55,5 +55,3 @@ Let me break it down in a simple way:
 - **Use `const`** if the value won’t change.  
 - **Use `let`** if the value **might** change.  
 - **Avoid `var`** because it has issues with scope and hoisting.  
-
-Let me know if anything is unclear! 🚀

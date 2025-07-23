@@ -69,10 +69,6 @@ Understanding **Stack vs. Heap** helps in avoiding **unintended mutations** and 
 ---
 ---
 
-Here’s how heap memory works for **objects, arrays, and functions** with reference examples for each:
-
----
-
 ## **1. Heap Memory for Objects**
 Objects in JavaScript are stored in **heap memory**, and variables store a **reference** to that memory location.
 
@@ -144,5 +140,3 @@ console.log(user.name); // Output: "Charlie"
 1. **Objects, arrays, and functions are stored in the heap** while variables hold **references** to them.
 2. **Modifying a referenced object or array affects all variables pointing to it.**
 3. **Primitive values (numbers, strings, booleans) are stored directly in the stack**, not the heap.
-
-Let me know if you need further clarification! 🚀

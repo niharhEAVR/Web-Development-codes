@@ -103,20 +103,20 @@
 {
     // splice method will change the original array
     let a = [1, "nihar", 3, 4, 5]
-    a.splice(2, 2)
+    a.splice(2, 2) // start at value position 2 and delete 2 values after that position
     console.log(a)
     console.log("\n\n")
 }
 
 {
     let a = [1, "nihar", 3, 4, 5]
-    a.splice(2, 0, 69, 919)
+    a.splice(2, 0, 69, 919, 49) // start at value position 2 and add 3 values after that position
     console.log(a)
     console.log("\n\n")
 }
 
 {
-    let a = [1, "nihar", 3, 4, 5]
+    let a = [1, "nihar", "kuku", 4, 5]
     // single value splice will start from the value position and delete the rest elements
     a.splice(3)
     console.log(a)
@@ -126,7 +126,7 @@
 
 {
     const a = [1, 2, 3, 4, 5]
-
+    
     // single value slice will keep the values from index to rest elements
     console.log(a.slice(2))
     console.log(a.slice(2, 4))
