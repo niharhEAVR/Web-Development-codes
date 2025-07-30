@@ -264,5 +264,3 @@ h1::after {
 
 ## **Conclusion**
 There are many ways to write CSS selectors, and using the **right selector** helps in **writing clean and efficient CSS**.  
-
-Would you like a practical example of these selectors in action? 😊

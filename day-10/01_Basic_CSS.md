@@ -1,6 +1,4 @@
-CSS (Cascading Style Sheets) is used to style HTML elements. Here are the basics you should know:
-
----
+CSS (Cascading Style Sheets) is used to style HTML elements.
 
 ## **1. CSS Syntax**
 A CSS rule consists of:
@@ -18,213 +16,151 @@ p {
 
 ---
 
-## **2. Ways to Add CSS**
-There are **three** ways to apply CSS:
+## 🧩 2. **Ways to Add CSS + Their Order (Specificity)**
 
-### **1. Inline CSS (Inside an HTML Tag)**
-Applied directly inside the `style` attribute of an HTML element.
+### ✅ There are **3 main ways** to apply CSS to HTML:
+
+| Method           | Syntax Example                                              | Specificity | Priority (↑ = higher) |
+| ---------------- | ----------------------------------------------------------- | ----------- | --------------------- |
+| **Inline CSS**   | `<h1 style="color: red;">Hello</h1>`                        | HIGH        | ↑↑↑                   |
+| **Internal CSS** | Inside `<style>` in `<head>`                                | MEDIUM      | ↑↑                    |
+| **External CSS** | Linked CSS file: `<link rel="stylesheet" href="style.css">` | MEDIUM      | ↑                     |
+
+### 🧠 **Important Rule: Cascade and Specificity**
+
+When conflicts happen:
+
+1. Inline CSS wins over internal or external.
+2. If two rules target the same element:
+
+   * **More specific selector wins**.
+   * **Later rule in the file wins** if specificity is the same.
+
+---
+
+## 🧮 **CSS Specificity Weight Order (Who Wins)**
+
+| Selector Type                             | Specificity Score | Example                             |
+| ----------------------------------------- | ----------------- | ----------------------------------- |
+| Inline Style                              | `1000`            | `<p style="color: red;">`           |
+| ID selector (`#id`)                       | `0100`            | `#main {}`                          |
+| Class (`.class`), Attribute, Pseudo-class | `0010`            | `.title`, `[type="text"]`, `:hover` |
+| Element tag                               | `0001`            | `p`, `h1`, `ul`                     |
+| Universal (`*`)                           | `0000`            | `* {}`                              |
+
+✅ **Tip**: `!important` overrides everything — use sparingly!
+
+---
+
+### 3. CSS Units
+
+## ✅ 1. `px` → Pixels (Fixed size)
+
+* **Absolute** size.
+* Not affected by parent size.
+
+### Example:
+
 ```html
-<p style="color: red;">This is red text.</p>
+<div style="font-size: 20px;">
+  <p style="font-size: 14px;">This is 14px text</p>
+</div>
 ```
-**Best for quick fixes, but not recommended for large projects.**
+
+✔ `14px` will be **exactly 14px**, no matter what the parent is.
 
 ---
 
-### **2. Internal CSS (Inside `<style>` in `<head>` section)**
+## ✅ 2. `%` → Percentage (Relative to Parent)
+
+* Relative to the **parent's dimension** (width, height, etc.).
+
+### Example:
+
 ```html
-<head>
-  <style>
-    p {
-      color: green;
-    }
-  </style>
-</head>
+<div style="width: 400px;">
+  <div style="width: 50%;">Child (200px wide)</div>
+</div>
 ```
-**Good for single-page styling but not scalable.**
+
+✔ `50%` of `400px` = `200px`.
+
+📌 For `font-size: 120%`, it means 120% of the **parent's font size**.
 
 ---
 
-### **3. External CSS (Linked File)**
-A separate `.css` file linked to an HTML file.
+## ✅ 3. `em` → Relative to the Parent's Font Size
+
+* `1em` = font-size of **the parent**.
+
+### Example:
+
 ```html
-<link rel="stylesheet" href="styles.css">
-```
-**Best practice for larger projects.**
-
----
-
-## **3. Selectors in CSS**
-### **1. Universal Selector (`*`)**
-Selects all elements.
-```css
-* {
-  margin: 0;
-  padding: 0;
-}
+<div style="font-size: 20px;">
+  <p style="font-size: 2em;">This text is 40px</p>
+</div>
 ```
 
-### **2. Element Selector**
-Targets a specific element.
-```css
-h1 {
-  color: blue;
-}
-```
+✔ `2em` = `2 × 20px` = `40px`.
 
-### **3. Class Selector (`.`)**
-Targets elements with a specific class.
-```css
-.my-class {
-  font-size: 20px;
-}
-```
-Used in HTML:
+⚠️ **Nesting multiplies**:
+
 ```html
-<p class="my-class">This is styled.</p>
+<div style="font-size: 20px;">
+  <div style="font-size: 2em;"> <!-- 40px -->
+    <p style="font-size: 0.5em;"> <!-- 0.5 × 40 = 20px -->
+      Text is 20px
+    </p>
+  </div>
+</div>
 ```
 
-### **4. ID Selector (`#`)**
-Targets a specific element with an ID.
-```css
-#unique-id {
-  background-color: yellow;
-}
-```
-Used in HTML:
+---
+
+## ✅ 4. `rem` → Relative to Root (`html`) Font Size
+
+* `1rem` = font-size of the `html` tag.
+* Doesn’t get affected by nesting.
+
+### Example:
+
 ```html
-<p id="unique-id">This is unique.</p>
+<html style="font-size: 16px;">
+  <body>
+    <div style="font-size: 2rem;">Text is 32px</div>
+  </body>
+</html>
 ```
 
-### **5. Grouping Selector**
-Applies styles to multiple elements.
-```css
-h1, h2, p {
-  font-family: Arial, sans-serif;
-}
-```
-
-### **6. Descendant Selector**
-Styles elements inside another element.
-```css
-div p {
-  color: purple;
-}
-```
+✔ Always `2 × 16px` = `32px`, no matter how deep it's nested.
 
 ---
 
-## **4. Common CSS Properties**
-### **1. Text & Font Styling**
-```css
-p {
-  color: red;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
+## ✅ 5. `vh` and `vw` → Viewport Height / Width
+
+* `1vh` = 1% of the **viewport height**.
+* `1vw` = 1% of the **viewport width**.
+
+### Example:
+
+```html
+<div style="width: 50vw; height: 20vh;">Box</div>
 ```
 
-### **2. Box Model (Margin, Padding, Border)**
-```css
-div {
-  width: 200px;
-  height: 100px;
-  margin: 10px;
-  padding: 20px;
-  border: 2px solid black;
-}
-```
+✔ On a screen that's 1000px wide and 800px tall:
 
-### **3. Backgrounds**
-```css
-body {
-  background-color: lightgray;
-  background-image: url('image.jpg');
-  background-size: cover;
-}
-```
-
-### **4. Flexbox (For Layouts)**
-```css
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```
+* `50vw` = `500px`
+* `20vh` = `160px`
 
 ---
 
-## **5. CSS Units**
-- **px** → Pixels (Fixed size)
-- **%** → Percentage (Relative size)
-- **em** → Relative to the parent element
-- **rem** → Relative to the root (`html`) element
-- **vh/vw** → Viewport height/width
+## 🔁 Quick Comparison Table:
 
-Example:
-```css
-p {
-  font-size: 2em; /* Twice the size of the parent font */
-}
-```
-
----
-
-## **6. Responsive Design**
-### **1. Media Queries**
-Used for different screen sizes.
-```css
-@media (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-```
-
-### **2. Flexbox & Grid**
-Used for layouts.
-```css
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-```
-
----
-
-## **7. CSS Animations & Transitions**
-### **1. Transitions**
-```css
-button {
-  background-color: blue;
-  transition: background-color 0.5s;
-}
-button:hover {
-  background-color: red;
-}
-```
-
-### **2. Animations**
-```css
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100px);
-  }
-}
-div {
-  animation: slide 2s infinite;
-}
-```
-
----
-
-## **8. Best Practices**
-✅ Use **external CSS files** for scalability.  
-✅ Use **classes (`.class`) instead of IDs (`#id`)** for reusable styles.  
-✅ Keep your CSS **organized and modular**.  
-✅ Use **flexbox and grid** for layouts instead of `float`.  
-✅ Write **responsive CSS** for different screen sizes.
+| Unit  | Relative To             | Affected by Parent? | Responsive? |
+| ----- | ----------------------- | ------------------- | ----------- |
+| `px`  | Fixed pixels            | ❌ No                | ❌ No        |
+| `%`   | Parent’s size           | ✅ Yes               | ✅ Yes       |
+| `em`  | Parent’s font-size      | ✅ Yes               | ✅ Yes       |
+| `rem` | Root (`html`) font-size | ❌ No                | ✅ Yes       |
+| `vh`  | Viewport height         | ❌ No                | ✅ Yes       |
+| `vw`  | Viewport width          | ❌ No                | ✅ Yes       |

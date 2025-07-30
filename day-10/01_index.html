@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index page</title>
 
-    <!-- External CSS linking -->
-    <link rel="stylesheet" href="./01_style.css" />
-    
-    <!-- Internal CSS -->
-    <style>
-      /* Using ID  */
-      #para {
-        color: blue;
-      }
-      p {
-        background-color: aqua;
-      }
-      /* I want all element in paragraph should became same bg color then use = !important */
-      /* 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index page</title>
+
+  <!-- External CSS linking -->
+  <link rel="stylesheet" href="./01_style.css" />
+
+  <!-- Internal CSS -->
+  <style>
+    /* Using ID  */
+    #para {
+      color: blue;
+    }
+
+    p {
+      background-color: aqua;
+    }
+
+    /* I want all element in paragraph should became same bg color then use = !important */
+    /* 
       p{
         background-color: pink !important;
         } 
         */
-    </style>
-  </head>
+  </style>
+</head>
 
-  <body>
-    <h1>Welcome to Index page</h1>
+<body>
+  <!-- Inline CSS -->
+  <p style="color: red; background-color: yellow">
+    <b>Lorem ipsum dolor sit amet.</b>
+  </p>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quaerat id
-      tempore! Sed nam maxime voluptas odit et repellat omnis.
-    </p>
-    <!-- Inline CSS -->
-    <p style="color: red; background-color: yellow">
-      <b
-        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis eaque
-        perferendis provident ut architecto ad facere officiis? Esse corrupti
-        quod natus, nesciunt minima officiis laudantium aperiam, illum, magni at
-        laboriosam!</b
-      >
-    </p>
+  <!-- Internal CSS -->
+  <p>Lorem ipsum dolor sit amet.</p>
+  <!-- Using id in Internal CSS -->
+  <p id="para">Lorem ipsum dolor sit amet.</p>
+  <p id="para2">Lorem ipsum dolor sit amet. </p>
+  
+  <hr />
+  
+  <footer>Iam Footer</footer>
+</body>
 
-    <!-- Using id in Internal CSS -->
-    <p id="para">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      dignissimos temporibus aliquam dolore deserunt officia, quas doloremque
-      mollitia facere alias nostrum velit itaque reprehenderit nam unde nisi rem
-      corporis. Cumque, quo? Qui veritatis praesentium eveniet rerum explicabo
-      deserunt natus vel autem. Quisquam voluptates dolorum, eum nulla eius ad
-      cum rem!
-    </p>
-    <hr />
-
-    <p id="para2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, tenetur.
-    </p>
-
-    <footer>Iam Footer</footer>
-  </body>
 </html>
