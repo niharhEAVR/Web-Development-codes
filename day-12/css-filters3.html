@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        .img{
+            width: 400px;
+
+        }
+        .img1{
+            filter: blur(5px);
+        }
+        .img21{
+            filter:brightness(50%);
+        }
+        .img22{
+            filter:grayscale(80%);
+        }
+        .img23{
+            filter:sepia(10%);
+        }
+        .img24{
+            filter:invert(0.7);
+        }
+        .img25{
+            filter:opacity(0.8);
+        }
+        .img26{
+            /* two or more property can written like this  */
+            filter:brightness(80%) blur(3px);
+        }
+        .img3{
+            filter: contrast(200%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img img1" src="./sonam.jpg" alt="">
+        <img class="img img21" src="https://images-cdn.ubuy.ae/670597420495376e8c552b55-famous-actress-kate-winslet-sexy-poster.jpg" alt="">
+        <img class="img img22" src="https://i.ebayimg.com/images/g/94IAAOSwdqJicV0f/s-l400.jpg" alt="">
+        <img class="img img23" src="https://i.pinimg.com/736x/9e/2c/00/9e2c0018219b5fb1d229b2f05f136459.jpg" alt="">
+        <img class="img img24" src="https://hips.hearstapps.com/hmg-prod/images/jennifer-lawrence-attends-the-anatomie-dune-chute-red-news-photo-1704650471.jpg" alt="">
+        <img class="img img25" src="https://hips.hearstapps.com/hmg-prod/images/jennifer-lawrence-attends-the-anatomie-dune-chute-red-news-photo-1704650471.jpg" alt="">
+        <img class="img img26" src="./sonam.jpg" alt="">
+        <img class="img img3" src="https://gallery-cdn.tiscali.it/repository/1958/650x468/1957817.jpg" alt="">
+    </div>
+</body>
+</html>
