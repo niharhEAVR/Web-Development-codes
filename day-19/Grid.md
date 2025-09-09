@@ -1,3 +1,7 @@
+### If you want to master the grid more then pleay this learning game:
+
+[Grid Garden](https://cssgridgarden.com/)
+
 ### CSS Grid: A Detailed Explanation  
 
 CSS Grid is a powerful layout system in CSS that allows for the design of complex web layouts with ease. It provides a two-dimensional system, meaning it can handle both rows and columns simultaneously, unlike Flexbox, which primarily deals with one dimension at a time.
@@ -193,4 +197,112 @@ Grid is highly responsive. You can change layouts based on screen size.
 ## 🎯 **Final Thoughts**  
 CSS Grid is a game-changer for web layouts. It provides a clean, efficient way to build complex designs without relying on `float` or `position`.  
 
-Want to try it? Use **`display: grid;`** and start experimenting! 🚀  
+
+---
+---
+---
+
+
+
+# 🎯 What is `span` in CSS Grid?
+
+In **Grid Layout**, you can place an item across **multiple rows or columns**.
+The **`span` keyword** is used to tell the browser:
+
+👉 “This grid item should **span across N tracks (rows/columns)**, starting from where it is placed.”
+
+---
+
+## 🔹 Where can we use `span`?
+
+* `grid-column`
+* `grid-row`
+
+Both have start / end values:
+
+```css
+grid-column: <start> / <end>;
+grid-row: <start> / <end>;
+```
+
+Instead of giving an exact **line number** for `<end>`, you can use **`span N`**.
+This means → "extend this item across N tracks".
+
+---
+
+# 🖼 Examples
+
+### Example 1: Spanning columns
+
+```html
+<div class="grid">
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+</div>
+```
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 equal columns */
+  grid-template-rows: 100px;
+  gap: 5px;
+}
+
+.item2 {
+  grid-column: span 2; /* take up 2 columns */
+}
+```
+
+🔎 Result →
+
+* Item 2 stretches across **2 columns** (instead of 1).
+* Item 1 and 3 each occupy 1 column.
+
+---
+
+### Example 2: Spanning rows
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.item1 {
+  grid-row: span 2; /* take up 2 rows */
+}
+```
+
+🔎 Result →
+
+* Item 1 stretches vertically across **2 rows**.
+* Other items fit into the remaining cells.
+
+---
+
+### Example 3: Start + Span
+
+You can also combine explicit start with span:
+
+```css
+.item3 {
+  grid-column: 2 / span 2; /* start at column 2, span across 2 columns */
+}
+```
+
+👉 This means: “Start at column line 2 and extend 2 tracks to the right.”
+
+---
+
+# ✅ Quick Summary
+
+* **`span`** in Grid = stretch an item across **multiple rows/columns**.
+* Used with `grid-column` and `grid-row`.
+* Syntax examples:
+
+  * `grid-column: span 2;` → occupy 2 columns from current position.
+  * `grid-row: 1 / span 3;` → start at row 1, stretch down across 3 rows.

@@ -1,3 +1,7 @@
+### To practice flexbox things play this game:
+
+[frog game](https://flexboxfroggy.com/)
+
 ### **CSS Flexbox (Flexible Box Layout)**
 Flexbox is a CSS layout module that provides an efficient way to align and distribute space among items in a container, even when their sizes are unknown or dynamic. It makes designing flexible, responsive layouts easier.
 
@@ -502,3 +506,146 @@ Yes! You can use any number, including:
 - Default value is `0`.
 
 Let me know if you need more clarification! 🚀
+
+
+
+---
+---
+---
+
+
+# 🎯 What is `flex-flow`?
+
+👉 `flex-flow` = **`flex-direction` + `flex-wrap`**
+
+Instead of writing them separately, you can combine them in one line.
+
+---
+
+## 🔹 Parts of `flex-flow`
+
+1. **`flex-direction`** → Defines **main axis direction** (the direction in which flex items are placed).
+
+   * `row` (default) → left to right
+   * `row-reverse` → right to left
+   * `column` → top to bottom
+   * `column-reverse` → bottom to top
+
+2. **`flex-wrap`** → Defines whether items **wrap into multiple lines** or stay on a single line.
+
+   * `nowrap` (default) → all items stay in one line
+   * `wrap` → items wrap onto new lines if space runs out
+   * `wrap-reverse` → like wrap, but new line goes **upwards** instead of downwards
+
+---
+
+## 🔹 Syntax
+
+```css
+flex-flow: <flex-direction> <flex-wrap>;
+```
+
+If you omit one, the browser uses default values:
+
+* `flex-direction: row`
+* `flex-wrap: nowrap`
+
+---
+
+# 🖼 Examples
+
+### Example 1: Default
+
+```css
+.container {
+  display: flex;
+  flex-flow: row nowrap; /* default */
+}
+```
+
+👉 Items flow left-to-right, all in a single line (no wrapping).
+
+---
+
+### Example 2: Row + Wrap
+
+```css
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+👉 Items go left-to-right, and if space ends → they wrap into the **next line**.
+
+---
+
+### Example 3: Column + Wrap
+
+```css
+.container {
+  display: flex;
+  flex-flow: column wrap;
+}
+```
+
+👉 Items go top-to-bottom, and if height isn’t enough, they wrap into a **new column**.
+
+---
+
+### Example 4: Row-Reverse + Wrap-Reverse
+
+```css
+.container {
+  display: flex;
+  flex-flow: row-reverse wrap-reverse;
+}
+```
+
+👉 Items flow right-to-left, and wrapping happens **upwards**.
+
+---
+
+# ✅ Visualization
+
+Imagine 6 items inside a flex container that is not wide enough.
+
+* `flex-flow: row nowrap;`
+  → `1 2 3 4 5 6` (all in one row, may overflow)
+
+* `flex-flow: row wrap;`
+  →
+
+  ```
+  1 2 3
+  4 5 6
+  ```
+
+* `flex-flow: column wrap;`
+  →
+
+  ```
+  1
+  2
+  3
+  ---
+  4
+  5
+  6
+  ```
+
+* `flex-flow: row-reverse wrap-reverse;`
+  →
+
+  ```
+  6 5 4
+  3 2 1   (next line goes above instead of below)
+  ```
+
+---
+
+# 📌 Summary
+
+* **`flex-flow`** = shorthand for **`flex-direction`** + **`flex-wrap`**.
+* Helps control **direction** and **wrapping** of flex items.
+* Defaults to → `flex-flow: row nowrap;`.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(29, 30, 33);
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box {
+            height: calc(100px + 10%);
+            width: calc(100px + 10%);
+            background-color: rgb(232, 219, 40);
+            border: 1px solid black;
+            border-end-end-radius: calc(10px + 5%);
+            border-top-left-radius : calc(10px + 5%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

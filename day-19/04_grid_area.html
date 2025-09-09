@@ -9,55 +9,64 @@
         border: 2px solid black;
         display: grid;
         grid-template-areas:
-          "nav nav nav"
-          "side article article"
-          "footer footer footer"
+          "nav nav nav nav"
+          "section main main main"
+          "section . . aside"
+          "footer footer footer footer"
         ;
         /* this method is looks like the rowspan and colspan of a html table  */
         /* where we use 3 columns for nav bar and 2 columns for article and again 3 columns for footer  */
 
         /* use developer tool and click on grid then you will see that, what i am trying to say  */
-      }
 
-      .item {
-        border: 2px solid red;
-        height: 55px;
+        /* dot (.) is used to make an empty grid cell */
+
       }
 
       .item-1 {
         grid-area: nav;
         background-color: aqua;
+        text-align: center;
+        height: 100px;
       }
 
       .item-2 {
-        grid-area: side;
+        grid-area: main;
         background-color: beige;
+        text-align: center;
+        height: 500px;
       }
 
       .item-3 {
-        grid-area: article;
+        grid-area: section;
         background-color:violet;
+        text-align: center;
+        height: 800px;
       }
 
       .item-4 {
-        grid-area: footer;
+        grid-area: aside;
         background-color: lightpink;
+        text-align: center;
+        height: 300px;
       }
 
       .item-5 {
-        grid-area: nav;
+        grid-area: footer;
         /* item 5 getting overlaped with item 1  */
+        text-align: center;
+        height: 100px;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="item item-1">1</div>
-      <div class="item item-2">2</div>
-      <div class="item item-3">3</div>
-      <div class="item item-4">4</div>
-      <div class="item item-5">5</div>
+      <div class="item item-1">nav</div>
+      <div class="item item-2">main</div>
+      <div class="item item-3">section</div>
+      <div class="item item-4">aside</div>
+      <div class="item item-5">footer</div>
     </div>
   </body>
 </html>
