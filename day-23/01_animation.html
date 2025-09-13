@@ -9,53 +9,53 @@
     * {
       margin: 0px;
       padding: 0px;
-    }
-
-    .container {
-      background-color: beige;
-      border: 5px solid black;
-      width: 100vw;
-      height: 100vh;
-      padding: 10px;
       box-sizing: border-box;
     }
 
-    #box1 {
-      background-color: aqua;
-      border: 2px solid black;
+    .container {
+      background-color: rgb(28, 28, 27);
+      width: 100vw;
+      height: 100vh;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .box {
+      background-color: rgb(75, 75, 75);
+      border-radius: 1rem;
       width: 200px;
       height: 50px;
       position: relative;
-      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-      animation: 3s ease-in-out 0s infinite alternate running box1;
+    }
+
+    #box1 {
+      /* animation: keyframe-name duration timing-function delay iteration-count direction fill-mode; */
+      animation: box1 3s linear 0s infinite alternate running;
     }
 
     #box2 {
-      background-color: tomato;
-      border: 2px solid black;
-      width: 200px;
-      height: 50px;
-      position: relative;
-      top: 84vh;
-      bottom: 0;
-      animation: 3s ease-in-out 0s infinite alternate-reverse running box2;
+      /* top: 80vh; */
+      /* bottom: 0; */
+      animation: 3s linear 0s infinite alternate-reverse running box2;
+      /* name can be written at last also */
     }
 
     #circle {
-      background-color: greenyellow;
-      border: 2px solid black;
+      background-color: rgb(7, 31, 127);
       border-radius: 30px;
       width: 50px;
       height: 50px;
-      position: relative;
-      animation: 5s ease-in-out 0s infinite alternate-reverse running circle1;
+      position: absolute;
+      animation: 3s linear 0s infinite alternate-reverse running circle1;
     }
 
     @keyframes box1 {
       from {
         left: 0;
       }
-
       to {
         left: calc(100vw - 230px);
         /* Adjust to prevent overflow */
@@ -75,22 +75,23 @@
 
     @keyframes circle1 {
       0% {
-        top: 0%;
-        left: 0%;
-      }
-
-      25% {
-        top: 10%;
+        top: 60px;
         left: calc(100vw - 75px);
       }
-
-      50% {
-        top: 65%;
-        left: 0%;
+      25% {
+        top: 25%;
+        left: 0;
       }
-
-      100% {
+      50% {
+        top: 50%;
+        left: calc(100vw - 75px);
+      }
+      75% {
         top: 75%;
+        left: 0;
+      }
+      100% {
+        top: calc(100vh - 110px);
         left: calc(100vw - 75px);
       }
     }
@@ -100,8 +101,8 @@
 <body>
   <div class="container">
     <div class="box" id="box1"></div>
-    <div class="box" id="box2"></div>
     <div id="circle"></div>
+    <div class="box" id="box2"></div>
   </div>
 </body>
 

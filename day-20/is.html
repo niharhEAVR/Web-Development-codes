@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section :is(h1, h2) {
+            color: blue;
+        } /* This CSS rule applies blue color to h1 and h2 elements inside a section */
+        nav ul li :is(a) {
+            text-decoration: none;
+            color: green;
+        } /* This CSS rule applies no text decoration and green color to a elements inside li inside ul inside nav */
+        article :is(p, h1) {
+            font-size: 50px;
+            color: red;
+        } /* This CSS rule applies font size of 20px and red color to p elements inside an article */
+    </style>
+</head>
+<body>
+    <nav><ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul></nav>
+
+    <article>
+        <h1>Hello Welcome</h1>
+        <p>This is a paragraph inside an article.</p>
+        <p>This is another paragraph inside the same article.</p>
+    </article>
+
+    <section>
+        <h1>Hello World</h1>
+        <h2>Hello World</h2>
+        <h3>Hello World</h3>
+    </section>
+</body>
+</html>
