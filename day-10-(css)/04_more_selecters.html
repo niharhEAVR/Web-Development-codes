@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box:first-child {
+            background-color: violet;
+        }
+
+        .box:first-line {
+            color: rgb(25, 0, 255);
+        }
+
+        .container * {
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        [data-color="primary"] {
+            padding-top: 100px;
+            color: tomato !important;
+
+
+        }
+
+        .boxes:nth-child(even) {
+            background-color: orange;
+        }
+
+        .boxes:nth-child(odd) {
+            background-color: rgba(0, 195, 255, 0.534);
+        }
+
+        .boxes:nth-last-child(2) {
+            background-color: rgba(187, 255, 0, 0.404);
+        }
+        /* this will count the chlids number from bottom to top */
+
+        .container2 * {
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+
+
+        /* we can put come content in our html web page  by using css like this, and check this using develepor tool  */
+        .container2:before {
+            content: "Hello";
+        }
+
+        .container2:after {
+            content: "Bye";
+        }
+
+
+        ::selection {
+            color: aqua;
+            background-color: darkslategray;
+        }
+        /* this property is most needed property of all time */
+        /* now if you select some text using your mouse for copy you will see the work  */
+
+        
+        textarea::placeholder {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">i am first child of the container or the parent div</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui rerum magnam pariatur eaque nemo
+            perspiciatis voluptatibus corrupti illum, natus laudantium modi molestiae maxime ad minus accusamus
+            voluptatum veritatis autem repellat, aliquid impedit voluptas sequi ipsum deserunt consectetur? Ab
+            necessitatibus id, dolor rerum nisi doloribus voluptatibus, sint ex quasi fugit obcaecati.</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum optio neque esse? Praesentium
+            repudiandae quo dolores. Quae veniam tempora ipsum porro deleniti? Dolor architecto quae itaque hic expedita
+            facere cupiditate maiores consequatur alias aliquid laboriosam deleniti, placeat qui, ipsum praesentium quam
+            quod? Eveniet unde porro amet cum dolorum eligendi accusamus! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptatum est ipsam error, illo esse hic voluptatibus laboriosam atque repellendus soluta
+            tempore accusamus neque dolorem beatae officia quo, ut dolores delectus quos corporis sequi quidem, fuga
+            impedit. Praesentium qui fugit totam animi ullam accusantium rerum beatae, provident aut expedita,
+            consequuntur a?
+        </div>
+        <div data-color="primary" class="box">In Css you can choose any attribute as a selector, but the attribute
+            should be written inside of that tag <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum et
+            eum nam quas excepturi voluptatum cupiditate veniam vitae? Necessitatibus quasi distinctio iure nesciunt
+            voluptates. Unde, cum officiis vero molestias nostrum fugit quae, laborum architecto ex dolorem esse quod
+            soluta id ipsa harum. Placeat quae impedit aperiam fugiat veritatis ratione illo.</div>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <div class="container2">
+        <div class="boxes">i am the 1st box</div>
+        <div class="boxes">i am the 2nd box</div>
+        <div class="boxes">i am the 3rd box</div>
+        <div class="boxes">i am the 4th box</div>
+        <div class="boxes">i am the 5th box</div>
+        <div class="boxes">i am the 6th box</div>
+        <div class="boxes">i am the 7th box</div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+    <textarea name="text area" id="#" style="height: 400px; width: 400px;"
+        placeholder="This is your text area"></textarea>
+</body>
+
+</html>

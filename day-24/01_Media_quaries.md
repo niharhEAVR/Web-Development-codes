@@ -204,7 +204,3 @@ body {
 - They target **screen width, height, orientation, resolution, and more**.
 - Use **breakpoints** to define when styles change.
 - Start with **mobile-first** design.
-
----
-
-### **🎯 Need more help? Let me know! 🚀**

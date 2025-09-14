@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+:root {
+    --main-color: #deab5f;
+    --primary-color: #312e2e;
+    /* --secondary-color: #c0a080; */
+    /* --background-color: #f5f5f5; */
+    /* --text-color: #333; */
+    /* --accent-color: #d2691e; */
+}
+
+body{
+    background: #100e0f;
+}
+
+
+/* Navigation Bar Styling start*/
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-family: sans-serif;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+li a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+/* Navigation Bar Styling end*/
+
+
+
+/* Header Section Styling start*/
+button{
+    padding: 10px 30px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+
+} 
+
+.header{
+    background: url('https://images.unsplash.com/photo-1598528223810-15a1b87fba17?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    font-weight: normal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.main-headings{
+    position: absolute;
+    top: 7rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+    margin-bottom: -40px;
+}
+
+.primary-headings{
+    position: absolute;
+    bottom: 4rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+    margin-bottom: -40px;
+}
+
+.main-btn{
+    position: absolute;
+    bottom: 2rem;
+    padding: 10px 30px;
+    margin-top: 20px;
+    background: transparent;
+    background: var(--main-color);
+    transform: translateY(60px);
+}
+
+/* Header Section Styling end*/
+
+
+/* About Section Styling start*/
+
+#our-story{
+    height: 100vh;
+    margin-top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.img{
+    width: 400px;
+    height: 400px;
+    background: url(https://images.unsplash.com/photo-1533776992670-a72f4c28235e?q=80&w=1065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.title-style{
+    display : flex;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #fff;
+    transform: translateX(-20px);
+}
+
+
+.section-content p{
+    max-width: 500px;
+    color: #fff;
+    font-family: sans-serif;
+    line-height: 20px;
+    margin: 20px 0;
+}
+
+/* About Section Styling end*/
+
+
+
+/*coffee-menu Section Styling start*/
+
+.coffee-container{
+    height: 100vh;
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-section p{
+    max-width: 500px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.title-two{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.img-container{
+    flex-basis: 30%;
+}
+
+.img-container img{ 
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*coffee-menu Section Styling end*/
+
+
+/* product Section Styling start*/
+
+.products{
+    margin-top: 5rem;
+    /*we are not mentioning the height of this section because what if there are more that 10 cards presents then make it a fixed height will cause over lap between the cards and footer*/
+}
+
+.title-three{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    border: 2px solid var(--main-color);
+    padding: 0 20px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.card-img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -60px;
+}
+
+.img-one{
+    background: url(https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.img-two{
+    background: url(https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.img-three{
+    background: url(https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card .items p{
+    color: var(--main-color);
+    margin: 20px 0;
+}
+/* product Section Styling end*/
+
+
+/* Footer Section Styling start*/
+
+footer{
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 5rem;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer .container{
+    margin: 0 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+footer .heading-info{
+    margin-bottom: 20px;
+
+}
+
+
+footer p{
+    line-height: 20px;
+
+}
+
+span{
+    color: var(--main-color);
+
+}
+
+hr{
+    margin-bottom: 20px;
+    
+}
+
+/* Footer Section Styling end */
+
+/*responsive Design Styling start*/
+
+@media only screen and (max-width: 768px) {
+    .main-headings .primary-headings {
+        font-size: 2.5rem;
+    }
+
+    #our-story{
+        text-align: center;
+    }
+
+    #our-story .title{
+        transform: translateX(50px);
+    }
+
+    .content-section{
+        text-align: center;
+    }
+
+    #our-story .img-container .img{
+        width: 70% ;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .coffee-container .img-container{
+        margin-top: 5rem;
+        width: 40%;
+    }
+
+    .title{
+        margin: 0 auto;
+        
+    }
+
+    .title-two{
+        margin: 0 auto;
+
+    }
+
+    .title-three{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+
+}
