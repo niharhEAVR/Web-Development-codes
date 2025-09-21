@@ -4,4 +4,4 @@
 
 - **02, 03 these folders are for knowledge**
 
-- start from day 9:14:32 css huxn video revision
+- **04 this folders is for exploring**

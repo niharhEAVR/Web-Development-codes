@@ -12,6 +12,7 @@ let string2 = ""
 console.log(typeof string)
 console.log(typeof string2)
 
+// type casting
 let valueInBoolean = Boolean(string)
 let valueInBoolean2 = Boolean(string2)
 

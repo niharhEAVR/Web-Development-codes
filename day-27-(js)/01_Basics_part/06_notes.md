@@ -187,6 +187,210 @@ console.log(text.match(/ain/g)); // ["ain", "ain"]
 console.log(text.search(/rain/)); // 4
 ```
 
+## 🔹 1. Your String
+
+```js
+let text = "The rain in Spain";
+```
+
+So the text looks like this (with index positions):
+
+```
+Index:  0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16
+Chars:  T   h   e       r   a   i   n       i   n       S   p   a   i   n
+```
+
+---
+
+## 🔹 2. `match()` Example
+
+```js
+console.log(text.match(/ain/g));
+```
+
+### Explanation:
+
+* `/ain/g` → a **regular expression** that looks for `"ain"`.
+
+  * `g` = **global flag**, meaning find *all matches*, not just the first one.
+* `match()` → returns **an array of all matches**.
+
+In `"The rain in Spain"`, `"ain"` appears twice:
+
+1. `"rain"` → contains `"ain"` (at index 5–7).
+2. `"Spain"` → contains `"ain"` (at index 13–15).
+
+✅ Output:
+
+```js
+["ain", "ain"]
+```
+
+---
+
+## 🔹 3. `search()` Example
+
+```js
+console.log(text.search(/rain/));
+```
+
+### Explanation:
+
+* `/rain/` → regex looking for `"rain"`.
+* `search()` → returns the **index of the first match**, or `-1` if not found.
+
+In the string:
+
+```
+The rain in Spain
+    ^--- starts at index 4
+```
+
+✅ Output:
+
+```js
+4
+```
+
+---
+
+## 🔹 4. Difference Between `.match()` and `.search()`
+
+| Method     | What it Returns                              |
+| ---------- | -------------------------------------------- |
+| `match()`  | An **array of matches** (or `null` if none). |
+| `search()` | The **index of the first match** (or `-1`).  |
+
+---
+
+## 🔹 5. More Examples
+
+```js
+let str = "banana";
+
+// Find all "a"s
+console.log(str.match(/a/g)); // ["a", "a", "a"]
+
+// Search for "na"
+console.log(str.search(/na/)); // 2 (first "na" starts at index 2)
+```
+
+---
+
+✅ **Summary**:
+
+* `/pattern/flags` = RegEx in JS.
+* `.match()` → returns the matches.
+* `.search()` → returns the index of the first match.
+
+---
+
+# 🔹 Common RegEx Flags in JavaScript
+
+A regex looks like:
+
+```js
+/pattern/flags
+```
+
+---
+
+## 1. **`g` → Global search**
+
+* Finds **all matches**, not just the first one.
+
+```js
+let str = "banana";
+console.log(str.match(/a/));   // ["a"] → only first match
+console.log(str.match(/a/g));  // ["a", "a", "a"] → all matches
+```
+
+---
+
+## 2. **`i` → Case-insensitive**
+
+* Ignores uppercase/lowercase differences.
+
+```js
+let str = "Hello hello";
+console.log(str.match(/hello/));   // ["hello"] → matches only lowercase
+console.log(str.match(/hello/i));  // ["Hello"] → matches regardless of case
+```
+
+---
+
+## 3. **`m` → Multiline mode**
+
+* `^` and `$` match at **line breaks** too (not just start/end of whole string).
+
+```js
+let str = "first line\nsecond line";
+console.log(str.match(/^second/));   // null → without m, only start of whole string
+console.log(str.match(/^second/m));  // ["second"] → works on 2nd line too
+```
+
+---
+
+## 4. **`s` → Dotall mode**
+
+* Normally, `.` matches everything **except newline**.
+* With `s`, `.` also matches newlines.
+
+```js
+let str = "hello\nworld";
+console.log(str.match(/hello.world/));   // null → "." does not cross newline
+console.log(str.match(/hello.world/s));  // ["hello\nworld"]
+```
+
+---
+
+## 5. **`u` → Unicode**
+
+* Allows working with full Unicode (like emojis, special symbols).
+* Without `u`, regex may break with 2-byte characters.
+
+```js
+let str = "💖";
+console.log(/^.$/.test(str));    // false → fails without unicode flag
+console.log(/^.$/u.test(str));   // true  → works with unicode flag
+```
+
+---
+
+## 6. **`y` → Sticky search**
+
+* Matches from the **current position only** (no skipping ahead like `g`).
+
+```js
+let str = "abcabc";
+let regexG = /a/g;
+let regexY = /a/y;
+
+regexG.lastIndex = 2;
+regexY.lastIndex = 2;
+
+console.log(regexG.test(str)); // true  → finds "a" at index 3
+console.log(regexY.test(str)); // false → sticky: fails, because index 2 ≠ "a"
+```
+
+---
+
+# 🔹 Summary Table
+
+| Flag | Meaning                               | Example    |
+| ---- | ------------------------------------- | ---------- |
+| `g`  | Global (find all matches)             | `/a/g`     |
+| `i`  | Ignore case                           | `/hello/i` |
+| `m`  | Multiline                             | `/^word/m` |
+| `s`  | Dotall (let `.` match `\n`)           | `/a.b/s`   |
+| `u`  | Unicode (handle emojis, symbols)      | `/./u`     |
+| `y`  | Sticky (match exactly at `lastIndex`) | `/a/y`     |
+
+---
+
+✅ With these flags, you can make regex much more powerful and flexible.
+
+
 ---
 
 ## **Final Summary**

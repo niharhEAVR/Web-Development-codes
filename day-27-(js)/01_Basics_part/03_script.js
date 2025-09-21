@@ -78,6 +78,3 @@ function updateUser(obj) {
 updateUser(user);
 
 console.log(user.name); // Output: "Charlie"
-
-
-

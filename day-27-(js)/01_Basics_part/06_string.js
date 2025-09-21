@@ -1,4 +1,4 @@
-// first thing first that strings are immutable
+// first thing first that strings are immutable in javascript
 
 {
     let a = "Nihar"
@@ -9,7 +9,7 @@
     console.log(a[4])
     console.log(a[5])
     console.log(a[6])
-    
+
     console.log(a.length)
 }
 
@@ -37,8 +37,8 @@
     let b = "BANANA"
     console.log(a.toUpperCase())
     console.log(b.toLowerCase())
-    
-    console.log(a.slice(1,4)) // this slice property is exactly like python slice, so the first index number will include and the last one will not include 
+
+    console.log(a.slice(1, 4)) // this slice property is exactly like python slice, so the first index number will include and the last one will not include 
 
     console.log(a.slice(1)) // only one value will print the rest after that included index, no slicing after that
 
@@ -52,8 +52,8 @@
 
 
 
-    console.log(b.concat(" ",a))
-    console.log(b.concat(a," pie"))
+    console.log(b.concat(" ", a))
+    console.log(b.concat(a, " pie"))
 
     let name = "           nihar debnath            ";
     console.log(name.trim())
@@ -69,4 +69,12 @@
     console.log(a.startsWith("h"))
     console.log(a.endsWith("r"))
     console.log(a.endsWith("i"))
+}
+
+
+{
+
+    let text = "The rain in Spain";
+    console.log(text.match(/ain/g)); // ["ain", "ain"]
+    console.log(text.search(/rain/)); // 4
 }

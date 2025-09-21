@@ -140,3 +140,195 @@ console.log(user.name); // Output: "Charlie"
 1. **Objects, arrays, and functions are stored in the heap** while variables hold **references** to them.
 2. **Modifying a referenced object or array affects all variables pointing to it.**
 3. **Primitive values (numbers, strings, booleans) are stored directly in the stack**, not the heap.
+
+
+
+
+---
+---
+---
+
+
+
+## 🔹 1. How memory works in JS
+
+JavaScript has **two main places** for memory:
+
+1. **Stack (short-lived things)**
+
+   * Stores *primitives* (numbers, strings, booleans, null, undefined, symbols, bigints).
+   * Stores *references (pointers)* to objects/arrays/functions.
+   * Automatically managed, very fast.
+
+2. **Heap (long-lived, dynamic things)**
+
+   * Stores the actual *objects, arrays, functions*.
+   * Heap is bigger and flexible.
+   * Values here can grow/shrink (e.g. pushing items into an array).
+
+Example:
+
+```js
+let x = 10;               // stored in stack
+let arr = [1, 2, 3];      // reference (stack) → actual array in heap
+```
+
+---
+
+## 🔹 2. Garbage Collection
+
+JavaScript uses **automatic garbage collection** (mostly *mark-and-sweep algorithm*):
+
+* The engine (like V8 in Chrome/Node.js) tracks which objects are still *reachable* (can be accessed from your code).
+* If an object becomes **unreachable**, it is removed from heap automatically.
+
+Example:
+
+```js
+let user = { name: "Alex" }; 
+user = null;  
+// old object {name: "Alex"} becomes unreachable → garbage collected
+```
+
+So **you don’t need to manually free heap memory** (like in C/C++).
+
+---
+
+## 🔹 3. What is Memory Leak?
+
+A **memory leak** happens if objects remain *reachable* (referenced) but are no longer useful.
+Garbage collector won’t clear them because JS thinks you still need them.
+
+Example of leak:
+
+```js
+let cache = {};
+
+function addData(key, value) {
+  cache[key] = value; // stored forever unless cleared
+}
+
+addData("user1", { name: "Deb" });
+// Even if "user1" is never used, object stays in memory
+```
+
+Or with event listeners:
+
+```js
+function attach() {
+  let bigData = new Array(1000000).fill("x");
+  document.body.addEventListener("click", () => {
+    console.log(bigData.length);
+  });
+}
+attach();
+// bigData stays in heap because the closure keeps reference
+```
+
+---
+
+## 🔹 4. How to Avoid Memory Leaks
+
+1. **Remove references you don’t need**
+
+   ```js
+   user = null;
+   ```
+
+2. **Clean up event listeners**
+
+   ```js
+   element.removeEventListener("click", handler);
+   ```
+
+3. **Be careful with global variables**
+
+   * If you assign to `window.someVar = ...`, it stays until page refresh.
+
+4. **Use WeakMap/WeakSet** for caches
+
+   * They allow objects to be garbage-collected automatically.
+
+---
+
+✅ **Conclusion:**
+
+* Objects, arrays, and functions live in heap.
+* Garbage collection usually frees unused memory automatically.
+* **Memory leaks happen only if you accidentally keep references alive** (like global variables, event listeners, closures).
+* You don’t need `delete` like in C, but you should design code so unnecessary references get dropped.
+
+
+
+---
+---
+---
+
+
+## 🔹 1. JavaScript has its own Garbage Collector (GC)
+
+* JavaScript engines (like **V8 in Chrome/Node.js**, **SpiderMonkey in Firefox**, etc.) include a **garbage collector**.
+* Its job is to **automatically free memory** from the heap when objects/arrays/functions are **no longer reachable** in your program.
+* You don’t need to manually call `free()` or `delete` like in C/C++.
+
+---
+
+## 🔹 2. When does GC run?
+
+* It doesn’t wait until the **entire program ends**.
+* The garbage collector runs **periodically during execution**.
+* It looks for objects that can’t be reached anymore from the "root" (global scope, currently running functions, closures, etc.).
+
+This is called **reachability**:
+
+* If something can still be reached → memory is kept.
+* If something is unreachable → memory is released.
+
+---
+
+## 🔹 3. Example
+
+```js
+function test() {
+  let user = { name: "Alice" };
+  console.log(user.name);
+}
+
+test();
+// After test() finishes, "user" goes out of scope
+// object {name: "Alice"} is unreachable -> GC clears it automatically
+```
+
+---
+
+## 🔹 4. Important Point
+
+Garbage collection is **not immediate** and **not predictable**:
+
+* You can’t force it to run at a specific time.
+* The engine decides when it’s best to free memory (to avoid performance drops).
+
+---
+
+## 🔹 5. Memory Leak Problem
+
+Even with GC, memory leaks can happen if:
+
+* You keep unnecessary references alive.
+* Example:
+
+  ```js
+  let cache = {};
+  function store() {
+    cache["data"] = new Array(1000000).fill("x"); 
+  }
+  store();
+  // Even if not used, "cache" keeps the array alive -> GC won't delete it
+  ```
+
+So GC can only clean up memory that’s truly unreachable.
+
+---
+
+✅ **Conclusion:**
+Yes, JavaScript has a **built-in garbage collector** that clears heap memory automatically during execution. You don’t need to do manual memory management, but you **must avoid keeping useless references alive**, or memory leaks will still happen.

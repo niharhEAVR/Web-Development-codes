@@ -88,10 +88,10 @@ console.log(10 !== "10"); // true
 Used to combine multiple conditions.
 
 | Operator | Description | Example | Output |
-|----------|------------|---------|--------|
-| `&&` | AND | `(true && false)` | `false` |
-| `||` | OR | `(true || false)` | `true` |
-| `!` | NOT | `!true` | `false` |
+|----------|-------------|---------|--------|
+| `&&` | AND | `(true && false)`   | `false`|
+|  `or` | OR  | `(true or false)`   | `true` |
+| `!`  | NOT | `!true`             | `false`|
 
 📌 **Example:**
 ```javascript
@@ -103,27 +103,6 @@ if (age >= 18 && hasLicense) {
 } else {
     console.log("Cannot drive");
 }
-```
-
----
-
-## **5️⃣ Bitwise Operators**
-Used for bit-level operations.
-
-| Operator | Example | Binary Operation | Output |
-|----------|---------|------------------|--------|
-| `&` | `5 & 1` | `0101 & 0001` | `0001` (1) |
-| `|` | `5 | 1` | `0101 | 0001` | `0101` (5) |
-| `^` | `5 ^ 1` | `0101 ^ 0001` | `0100` (4) |
-| `~` | `~5` | `~0101` | `1010` (-6) |
-| `<<` | `5 << 1` | `0101 << 1` | `1010` (10) |
-| `>>` | `5 >> 1` | `0101 >> 1` | `0010` (2) |
-
-📌 **Example:**
-```javascript
-console.log(5 & 1); // 1
-console.log(5 | 1); // 5
-console.log(5 ^ 1); // 4
 ```
 
 ---
@@ -187,17 +166,173 @@ console.log(user ?? "Guest"); // "Alice"
 
 ---
 
-### **Final Summary**
-| Category | Operators |
-|----------|-----------|
-| Arithmetic | `+ - * / % ** ++ --` |
-| Assignment | `= += -= *= /= %= **=` |
-| Comparison | `== === != !== > < >= <=` |
-| Logical | `&& || !` |
-| Bitwise | `& | ^ ~ << >>` |
-| String | `+ +=` |
-| Ternary | `condition ? true : false` |
-| Type | `typeof instanceof` |
-| Nullish | `??` |
 
-Let me know if you need more details! 🚀
+
+## 🔹 1. What are Bitwise Operators?
+
+Bitwise operators work **directly on the binary representation of numbers** (0s and 1s).
+JavaScript converts numbers into **32-bit signed integers** for bitwise operations, does the operation on those 32 bits, and then converts back to a standard Number.
+
+For example:
+
+```js
+5 -> binary: 00000000000000000000000000000101
+3 -> binary: 00000000000000000000000000000011
+```
+
+---
+
+## 🔹 2. Types of Bitwise Operators
+
+### (a) AND (`&`)
+
+Compares each bit of two numbers.
+**1 & 1 → 1**, else → 0.
+
+```js
+5 & 3   // 1
+```
+
+Explanation:
+
+```
+  0101   (5)
+& 0011   (3)
+= 0001   (1)
+```
+
+---
+
+### (b) OR (`|`)
+
+Compares each bit.
+**1 | 1 → 1**, **1 | 0 → 1**, **0 | 0 → 0**.
+
+```js
+5 | 3   // 7
+```
+
+```
+  0101   (5)
+| 0011   (3)
+= 0111   (7)
+```
+
+---
+
+### (c) XOR (`^`) – Exclusive OR
+
+Gives `1` if the bits are **different**, `0` if same.
+
+```js
+5 ^ 3   // 6
+```
+
+```
+  0101   (5)
+^ 0011   (3)
+= 0110   (6)
+```
+
+---
+
+### (d) NOT (`~`)
+
+Flips all bits (1 → 0, 0 → 1).
+⚠️ Since numbers are signed 32-bit, this is effectively `-(n+1)`.
+
+```js
+~5   // -6
+```
+
+```
+  00000000000000000000000000000101   (5)
+~ 11111111111111111111111111111010   (-6)
+```
+
+---
+
+### (e) Left Shift (`<<`)
+
+Shifts bits to the left, filling with 0s on the right.
+Equivalent to multiplying by `2^n`.
+
+```js
+5 << 1   // 10
+```
+
+```
+  0101 (5)
+<< 1
+= 1010 (10)
+```
+
+---
+
+### (f) Signed Right Shift (`>>`)
+
+Shifts bits to the right, keeping the sign (fills with 1 for negatives, 0 for positives).
+Equivalent to dividing by `2^n` (floor for positives).
+
+```js
+5 >> 1   // 2
+```
+
+```
+  0101 (5)
+>> 1
+= 0010 (2)
+```
+
+Negative example:
+
+```js
+-5 >> 1   // -3
+```
+
+---
+
+### (g) Zero-Fill Right Shift (`>>>`)
+
+Shifts bits to the right, always filling with 0s.
+Doesn’t preserve sign, so negative numbers become large positives.
+
+```js
+-5 >>> 1
+```
+
+Becomes a big positive number: `2147483645`.
+
+---
+
+## 🔹 3. Practical Uses of Bitwise Operators
+
+1. **Fast multiplication/division by powers of 2**
+
+   ```js
+   5 << 1 // 10  (5 * 2)
+   8 >> 2 // 2   (8 / 4)
+   ```
+
+2. **Checking even/odd**
+
+   ```js
+   (5 & 1) === 1   // odd
+   (8 & 1) === 0   // even
+   ```
+
+3. **Swapping values without a temp variable**
+
+   ```js
+   let a = 5, b = 3;
+   a = a ^ b;
+   b = a ^ b;
+   a = a ^ b;
+   // a = 3, b = 5
+   ```
+
+4. **Flags & permissions (like in games, OS, etc.)**
+
+---
+
+✅ So, bitwise operators are just tools to manipulate the **binary-level representation** of numbers — very fast and useful in low-level programming, optimizations, and handling flags.

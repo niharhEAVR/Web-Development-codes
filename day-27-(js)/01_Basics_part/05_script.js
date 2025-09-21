@@ -1,7 +1,6 @@
 // Dates 
 
 let myDate = new Date() // Date id object in javascript
-console.log(typeof myDate)
 console.log(myDate.toString())
 console.log(myDate.toDateString())
 console.log(myDate.toLocaleDateString())
