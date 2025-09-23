@@ -5,10 +5,14 @@ console.log(heading.textContent)
 // there are the difference between innerHTML, innerText, textContent
 
 
-{let anotherHeading = document.querySelector('h1')
-console.log(anotherHeading)} // querySelector only selects the first element 
-{let anotherHeading = document.querySelectorAll('h1')
-console.log(anotherHeading)} // this selects all the elements
+{
+    let anotherHeading = document.querySelector('h1')
+    console.log(anotherHeading)
+} // querySelector only selects the first element 
+{
+    let anotherHeading = document.querySelectorAll('h1')
+    console.log(anotherHeading)
+} // this selects all the elements
 
 // querySelectorAll give values in NodeList format
 // and getElementByClassName give values in HTMLCollection format

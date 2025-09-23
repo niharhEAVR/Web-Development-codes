@@ -8,14 +8,14 @@ addLanguages("Javascript")
 
 
 // that why we can use createTextNode, its actually do the same work but in very optimized way
-function addOptiLanguages(langName){
+function addOptLanguages(langName){
     let lists = document.createElement('li');
     lists.appendChild(document.createTextNode(`${langName}`))
     document.querySelector('.container').appendChild(lists)
 }
-addOptiLanguages("Typescript")
-addOptiLanguages("Golang")
-addOptiLanguages(prompt("Enter language name"))
+addOptLanguages("Typescript")
+addOptLanguages("Golang")
+addOptLanguages(prompt("Enter language name"))
 
 
 

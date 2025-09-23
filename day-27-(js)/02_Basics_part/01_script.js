@@ -1,8 +1,13 @@
+// array is is mutable in javascript
+
 // there is two type of copy method in javascript => one is shallow copy means (reference or heap) and another one is deep copy means (stack)
 
 
 // splice(): Used to modify the original array by adding, removing, or replacing elements.
 // slice(): Used to extract a portion of the array without modifying the original array.
+let name = "nihar"
+// name.splice(2,1) // it will give error because string is immutable in javascript
+
 
 let array = [1, 2, 3, 4, 5];
 array.splice(2, 1); // Removes 1 element from index 2

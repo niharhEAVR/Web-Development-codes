@@ -1,11 +1,11 @@
-async function getData(miliSeconds){
-    return new Promise((resolve,reject) =>{
+async function getData(miliSeconds) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(202 + " Resolved and data succesfully loaded")
         }, miliSeconds);
     })
 }
-async function main(){
+async function main() {
     setTimeout(() => {
         console.log("Starting of Task 1")
     }, 1000);
@@ -24,10 +24,12 @@ async function main(){
 
     setTimeout(() => {
         console.log("Processing Data")
-    },1000);
+    }, 1000);
     setTimeout(() => {
         console.log("End of Task 1")
-    },3000);
-    
+    }, 3000);
+
 }
 main()
+
+// it will take total 9 seconds 

@@ -12,7 +12,9 @@ console.log('-:using spread operator:-')
 {
     const passedWithBonus = students
     .filter(student => student.score >= 50)
-    .map(student => ({...student, score: student.score + 5 }));
+    .map(student => ({...student, score: student.score + 5 })); // (...) is spread operator and it is used to copy all properties of student object into new object.
+    // like this we can add new properties or modify existing properties without changing the original object.
+    // if we dont use spread operator then it will return previous object inside new object like this {student: {name: 'Bob', score: 55}, score: 60}
     
     console.log(passedWithBonus);
 }

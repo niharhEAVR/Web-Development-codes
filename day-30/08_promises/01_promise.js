@@ -13,11 +13,11 @@ new Promise(function (resolve, reject) {
         } else {
             reject('your promise rejected')
         }
-    }, 1000)
+    }, 5000)
 })
 .then(data => {
     console.log("Success:", data)
-    console.log(`Id is : ${data.id.join('.')}`)
+    console.log(`Id is : ${data.id.join('')}`)
     return data.date; // if we return anything from this '.then' then the value will be trasnfer to the next '.then' , there we can use the value. Its called chaining method
 })
 .then(data => {

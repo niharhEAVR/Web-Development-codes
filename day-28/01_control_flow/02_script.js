@@ -49,7 +49,7 @@ for (let i = 1; i <= 10; i++) {
 
 
 console.log("\n\n\n") 
-//     // another good use of for-of loop is to find a string size
+// another good use of for-of loop is to find a string size
 {
     let language = "Javascript"; 
     let stringLength = 0; 

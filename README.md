@@ -5,3 +5,8 @@
 - **02, 03 these folders are for knowledge**
 
 - **04 this folders is for exploring**
+
+
+---
+
+### Upto `day-28 > 02_DOM > 02 colony` revise finished

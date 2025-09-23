@@ -1,7 +1,3 @@
-Alright! Here’s a **detailed explanation** of Event Listeners and Event Bubbling, along with how to stop it.
-
----
-
 ## **1. What is an Event Listener?**  
 An **event listener** is a method that waits for an event (like a click, hover, key press, etc.) on an HTML element and runs a function when the event occurs.  
 
@@ -104,11 +100,8 @@ document.getElementById("myLink").addEventListener("click", (event) => {
 ---
 
 
-Alright bro, let’s break down **Event Listeners** completely, covering everything from basic to advanced concepts.  
 
----
-
-# **1. What is an Event Listener?**
+# **1. What is an Event Listener again?**
 An **event listener** is a function that listens for user actions (events) like clicks, key presses, mouse movements, etc., on an HTML element and executes a function when the event occurs.  
 
 ### **Basic Syntax:**

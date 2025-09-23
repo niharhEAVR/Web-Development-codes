@@ -19,6 +19,7 @@ function sum(a,b){
     return a+b
 }
 function result(a,b,value){
+    console.log(typeof value);
     return value(a,b)
 }
 let addition = result(10,30,sum)

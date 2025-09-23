@@ -1,4 +1,4 @@
-// is this code we are focusing on singleton object
+// in this code we are focusing on singleton object
 
 const tinderUser = new Object() // this declaration is a singleton declaration object
 

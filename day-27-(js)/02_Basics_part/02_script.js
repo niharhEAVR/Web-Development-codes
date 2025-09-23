@@ -1,4 +1,4 @@
-// is this code we are focusing on object literal
+// in this code we are focusing on object literal
 
 let mySymbol = Symbol("NIHAR")
 
@@ -30,7 +30,11 @@ console.log(user)
 
 Object.freeze(user) // this will freeze the user object and i cannot add or replace or do anything with the user object (its freezed just like bank account)
 user.email = "nihardebnath@jod.com"
+user.bablu = "bablu"
 console.log(user)
-
-
-
+// There is no built-in Object.unfreeze in JavaScript.
+// Once an object is frozen with Object.freeze, it cannot be unfrozen.
+// To "unfreeze", you can create a shallow copy of the object:
+user = { ...user };
+user.bablu = "bablu"
+console.log(user)

@@ -58,8 +58,8 @@
 {
     let arr = [1, 2, 3, 4, 5, 7]
     // unshift method will add value at first
-    arr.unshift(69) // this will add second
-    arr.unshift("debnath") // this will add first
+    arr.unshift(69) 
+    arr.unshift("debnath") 
     // javascript follows sequense
     console.log(arr)
     console.log("\n\n")

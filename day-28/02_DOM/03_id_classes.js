@@ -5,10 +5,10 @@ console.log(boxes)
 
 boxes[2].style.backgroundColor = "cyan" // 2 is a index value
 
-document.getElementById("box5").style.backgroundColor = "lightpink"
+document.getElementById("box5").style.backgroundColor = "darkgreen"
 
 
-document.querySelector(".box").style.backgroundColor = "aquamarine" // this method will only select the first box or child of the container or parent //this method work as a inline css
+document.querySelector(".box").style.backgroundColor = "darkblue" // this method will only select the first box or child of the container or parent //this method work as a inline css
 
 
 
@@ -16,7 +16,7 @@ console.log(document.querySelectorAll(".box")) // this all method will include t
 // to change their existing property we have to use foreach loop for array
 // because this is a html collection array
 document.querySelectorAll(".box").forEach (element =>{
-    element.style.color = "magenta"
+    element.style.color = "white"
     element.style.fontSize = '20px'
 })
 

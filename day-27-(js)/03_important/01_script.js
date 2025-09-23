@@ -25,3 +25,7 @@ document.body.style.backgroundColor = "red"
 // because we added the script tag inside the head tag
 // if you are using DOM manypulation then its better to add the script tag a very last of the body tag.
 // this gives the body to load first then dom can do opeations
+
+document.querySelector(".toggle").addEventListener("click", () => {
+    document.body.style.backgroundColor = "white"   
+})

@@ -1,7 +1,7 @@
 console.log("\*Child\*")
 
-console.log(document.body.childNodes)
-console.log(document.body.childNodes[0])   // this numbers are index values
+console.log(document.body.childNodes) // this will give all the child nodes of the body tag including text and comment nodes also
+console.log(document.body.childNodes[0]) // this numbers are index values
 console.log(document.body.childNodes[1])
 console.log(document.body.childNodes[2])
 console.log(document.body.childNodes[3])
@@ -19,7 +19,7 @@ console.log(cont.lastChild)
 console.log(cont.lastElementChild)
 // ** this is the difference between the first child and first element child and same for last 
 
-// cont.lastElementChild.style.backgroundColor = "beige" //if you uncomment this then you will get to see that in developer tool console window there is inline css is adding instantly
+cont.lastElementChild.style.backgroundColor = "beige" //if you uncomment this then you will get to see that in developer tool console window there is inline css is adding instantly
 
 
 
@@ -30,8 +30,8 @@ console.log("\*Parent\*")
 let cont2 = document.body.childNodes[3]
 console.log(cont2.lastElementChild.parentElement)
 console.log(cont2.lastElementChild.parentNode)
-// console.log(cont2.lastElementChild.parentElement.parentElement)
-console.log(cont2.parentElement) //short form of the upline
+console.log(cont2.lastElementChild.parentElement.parentElement)
+console.log(cont2.parentElement) //short form of the upline code
 
 // what is the difference between parentNode and parentElement
 // If the parent is an actual DOM element, both parentNode and parentElement give you the same result.
@@ -43,12 +43,14 @@ console.log(cont2.parentElement) //short form of the upline
 console.log("\n\n\n")
 console.log("\*All childrens\*")
 
+// children will exclude text and comment nodes
+
 console.log(document.body.childNodes[3].children)
 console.log(document.body.childNodes[3].children[0])
 console.log(document.body.childNodes[3].children[1])
 console.log(document.body.childNodes[3].children[4])
 console.log(document.body.children)
-document.body.childNodes[3].children[2].style.backgroundColor = "yellow"
+document.body.childNodes[3].children[2].style.backgroundColor = "lightgreen"
 
 console.log(document.body.childNodes[3].children[2].nextElementSibling)
 console.log(document.body.childNodes[3].children[2].previousElementSibling)

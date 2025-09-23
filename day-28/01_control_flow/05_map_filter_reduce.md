@@ -1,5 +1,3 @@
-Great question! While **`map()`, `filter()`, and `reduce()`** are used to iterate over arrays, they are **not traditional loops** like `for` or `while`. Instead, they are **higher-order functions** that work on arrays and are part of functional programming in JavaScript.
-
 ### **Difference Between Loops and `map()`, `filter()`, `reduce()`**
 | Feature         | `for`/`while` Loops | `map()`, `filter()`, `reduce()` |
 |---------------|------------------|------------------------|
