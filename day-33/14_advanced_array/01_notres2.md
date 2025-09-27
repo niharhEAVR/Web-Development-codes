@@ -1,5 +1,3 @@
-Certainly! Here’s a breakdown to clarify where `%DebugPrint` is available and how it relates to **V8**, **d8**, and **v8-debug**:
-
 ### 1. **V8 Engine**
    - **V8** is Google’s JavaScript engine, used in environments like **Google Chrome** and **Node.js**.
    - In standard applications (e.g., Chrome’s JavaScript runtime or Node.js), V8’s internal debugging commands, like `%DebugPrint`, are **not exposed** to users.

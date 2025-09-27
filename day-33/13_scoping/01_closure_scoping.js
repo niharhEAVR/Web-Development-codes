@@ -1,5 +1,5 @@
 function changeColor(color){
-    return function init(){
+    return () => {
         document.body.style.backgroundColor = `${color}`
     }
 }

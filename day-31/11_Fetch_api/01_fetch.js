@@ -26,7 +26,6 @@
 
     function setTimeoutPromisified(ms) {
         return new Promise(resolve => setTimeout(resolve, ms))
-
     }
 
     let myData = fetch('https://api.github.com/users/Nihar-Debnath')

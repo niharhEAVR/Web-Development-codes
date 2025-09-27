@@ -1,5 +1,3 @@
-Sure! Let’s clarify the implications of using `document` inside the constructor versus outside of it in your JavaScript class.
-
 ### Using `document` Inside the Constructor
 
 1. **Immediate DOM Interaction**: 

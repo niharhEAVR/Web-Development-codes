@@ -16,7 +16,7 @@ class user{
 
 }
 
-const user1 = new user("name", "nooname@name.com", "no-name")
+const user1 = new user("name", "nooname@no-mail.com", "no-name")
 
 console.log(user1.showPassword())
 console.log(user1.showEmail())

@@ -8,23 +8,23 @@ console.log(descripter)
         name: "cooldude",
         age: "Infinity"
     };
-    
+
     Object.defineProperty(person, 'phoneNumber', {
         value: '123-45-6789',
         enumerable: false, // This makes 'phoneNumber' non-enumerable
     });
-    
+
     // Enumerating properties with for...in loop
     for (let [key, value] of Object.entries(person)) {
         console.log(`${key}: ${value}`); // Only 'name' and 'age' will be logged
     }
-    
+
     // Checking with Object.keys()
     console.log(Object.keys(person));
-    
+
     // but we can access non-enumerable property directly
     console.log(person.phoneNumber);
-    
+
     console.log(Object.getOwnPropertyDescriptor(person, "phoneNumber"));
     console.log(Object.getOwnPropertyDescriptor(person, "name"));
     // .getOwnPropertyDescriptor takes two arguments one is the object name, and other one is for the object keys
@@ -33,29 +33,29 @@ console.log(descripter)
 
 
 
-{   
+{
     //Example: writable and configurable
     console.log("\n\n\n")
     const car = {}; //empty object
-    
+
     // Defining a non-writable property
     Object.defineProperty(car, 'make', {
         value: 'Toyota',
         writable: false,      // The 'make' property cannot be changed
         configurable: true    // The 'make' property can be deleted or redefined
     });
-    
+
     // Defining a non-configurable property
     Object.defineProperty(car, 'model', {
         value: 'Corolla',
-        writable: true,       
-        configurable: false   
+        writable: true,
+        configurable: false
     });
-    
+
     console.log(car)
-    console.log(car.make); 
+    console.log(car.make);
     console.log(car.model);
-    
+
     console.log("\n")
     // Attempting to change the non-writable property 'make'
     car.make = 'Honda';

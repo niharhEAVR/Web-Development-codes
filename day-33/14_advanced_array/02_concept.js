@@ -8,7 +8,7 @@
 // Double (float, string, function)
 
 
-const arrTwo = [1,2,3,4,5]
+const arrTwo = [1, 2, 3, 4, 5]
 // PACKED_SMI_ELEMENTS
 
 arrTwo.push(6.0)
@@ -55,9 +55,9 @@ arrThree[2] = '3'
 const arrFour = [] // this is HOLEY_SMI_ELEMENTS array
 arrFour.push('1')
 arrFour.push('2')
-arrFour.push('3') 
+arrFour.push('3')
 // in this case the array becomes PACKED_ELEMETS ,
 // here no downgrading happening
 
-const arrFive = [1,2,3,4,5]
+const arrFive = [1, 2, 3, 4, 5]
 arrFive.push(Infinity)

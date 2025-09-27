@@ -54,7 +54,6 @@
 
 
 {
-    // The second scope's code is using function, but we can do he same thing in other way
     
     let myName = "          nihar           "
     String.prototype.trueLength = function(){
